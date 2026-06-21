@@ -326,7 +326,6 @@ summary:focus-visible {
   line-height: 1.58;
 }
 
-.empty-output-grid span,
 .store-badge,
 .detected {
   display: inline-flex;
@@ -517,52 +516,8 @@ summary:focus-visible {
   background: var(--surface-subtle);
 }
 
-.empty-output-main {
-  display: grid;
-  grid-template-columns: 36px 1fr;
-  gap: 12px;
-  align-items: center;
-}
-
-.empty-output-main svg {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  padding: 7px;
-  border-radius: var(--radius-sm);
-  background: var(--brand-soft);
-  color: var(--brand);
-}
-
-.empty-output-main strong {
-  display: block;
-  color: var(--ink);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.empty-output-main span {
-  display: block;
-  margin-top: 3px;
-  color: var(--soft);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
-}
-
-.empty-output-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.empty-output-grid span {
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+.empty-output {
+  min-height: 96px;
 }
 
 .loading-header {

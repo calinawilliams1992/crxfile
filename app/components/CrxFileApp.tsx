@@ -641,9 +641,7 @@ export function CrxFileApp() {
                 ) : null}
 
                 {plugin ? <ResultPanel plugin={plugin} copy={t} /> : null}
-                {!plugin && !error ? (
-                  loading ? <LoadingOutput copy={t} /> : <EmptyOutput copy={t} />
-                ) : null}
+                {!plugin && !error ? (loading ? <LoadingOutput copy={t} /> : <EmptyOutput />) : null}
               </div>
             </div>
           </div>
@@ -809,23 +807,8 @@ function TrustItem({ icon: Icon, label }: { icon: LucideIcon; label: string }) {
   );
 }
 
-function EmptyOutput({ copy }: { copy: Copy }) {
-  return (
-    <div className="empty-output">
-      <div className="empty-output-main">
-        <PackageCheck size={22} aria-hidden="true" />
-        <div>
-          <strong>{copy.form.hint}</strong>
-          <span>CRX + ZIP</span>
-        </div>
-      </div>
-      <div className="empty-output-grid">
-        <span>.crx</span>
-        <span>.zip</span>
-        <span>manifest.json</span>
-      </div>
-    </div>
-  );
+function EmptyOutput() {
+  return <div className="empty-output" aria-hidden="true" />;
 }
 
 function LoadingOutput({ copy }: { copy: Copy }) {
