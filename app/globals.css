@@ -285,14 +285,14 @@ summary:focus-visible {
   display: grid;
   justify-items: center;
   gap: 20px;
-  max-width: 840px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .intro-copy {
   display: grid;
   justify-items: center;
-  max-width: 700px;
+  max-width: 720px;
   text-align: center;
 }
 
@@ -311,7 +311,7 @@ summary:focus-visible {
 }
 
 .intro-copy h1 {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0;
   font-size: clamp(28px, 3.5vw, 40px);
   line-height: 1.22;
@@ -319,7 +319,7 @@ summary:focus-visible {
 }
 
 .hero-subtitle {
-  max-width: 680px;
+  max-width: 720px;
   margin: 14px 0 0;
   color: var(--muted);
   font-size: 16px;
@@ -338,7 +338,7 @@ summary:focus-visible {
 }
 
 .tool-workspace {
-  width: min(100%, 820px);
+  width: 100%;
   overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
@@ -783,7 +783,7 @@ summary:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  width: min(100% - 40px, 820px);
+  width: min(100% - 40px, 1120px);
   margin: 16px auto 0;
 }
 
@@ -1005,7 +1005,7 @@ summary:focus-visible {
 .faq-layout {
   display: grid;
   gap: 28px;
-  max-width: 920px;
+  max-width: 1120px;
 }
 
 .faq-list {
