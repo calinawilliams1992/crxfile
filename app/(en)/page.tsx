@@ -1,8 +1,21 @@
-import { CrxFileApp } from "./components/CrxFileApp";
+import type { Metadata } from "next";
+import { CrxFileApp } from "../components/CrxFileApp";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      "zh-CN": "/zh",
+      "x-default": "/"
+    }
+  }
+};
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  inLanguage: "en",
   mainEntity: [
     {
       "@type": "Question",
@@ -102,7 +115,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <CrxFileApp />
+      <CrxFileApp initialLang="en" />
     </>
   );
 }

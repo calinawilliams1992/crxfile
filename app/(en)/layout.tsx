@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.crxfile.xyz"),
@@ -19,9 +19,6 @@ export const metadata: Metadata = {
     "Chrome extension source code",
     "Edge add-ons downloader"
   ],
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
     type: "website",
     url: "https://www.crxfile.xyz",

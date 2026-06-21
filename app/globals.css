@@ -307,19 +307,6 @@ summary:focus-visible {
   box-shadow: var(--shadow);
 }
 
-.tool-topline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 48px;
-  padding: 0 20px;
-  border-bottom: 1px solid var(--line);
-  background: var(--surface-subtle);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 820;
-}
-
 .parse-form {
   display: grid;
   gap: 14px;
@@ -792,6 +779,18 @@ summary:focus-visible {
 .feature-list svg {
   margin-top: 2px;
   color: var(--success);
+}
+
+.feature-list h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.feature-list p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  line-height: 1.58;
 }
 
 .section-heading {
