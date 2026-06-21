@@ -89,14 +89,6 @@ const english = {
     partial:
       "Store metadata is limited for this extension. You can still try the official package download."
   },
-  learn: {
-    title: "What Is a CRX File?",
-    paragraphs: [
-      "A CRX file is the package format Chromium browsers use to distribute extensions. It works like a signed ZIP archive with a browser-verifiable header.",
-      "When you install from the Chrome Web Store, the browser downloads this package in the background. Store pages do not offer a direct download button, which is why a dedicated CRX file downloader like CRXFile exists.",
-      "The CRX file format matters for developers auditing permissions, users making backups, and IT teams managing browsers. A CRX extractor can unpack the package into JavaScript, HTML, CSS, assets, and manifest.json."
-    ]
-  },
   guide: {
     title: "How to Download a CRX File",
     subtitle:
@@ -155,40 +147,13 @@ const english = {
     outro:
       "This workflow is common in extension security auditing and useful for learning Chrome Extension APIs."
   },
-  why: {
-    title: "Why Use CRXFile?",
-    intro:
-      "CRXFile is a CRX downloader that handles store update endpoints for you across Chrome and Edge.",
-    items: [
-      {
-        icon: Globe2,
-        title: "Dual-store support",
-        body: "One tool for Chrome Web Store and Microsoft Edge Add-ons."
-      },
-      {
-        icon: PackageCheck,
-        title: "No plugin needed",
-        body: "Runs in your browser. Install nothing to download CRX files."
-      },
-      {
-        icon: Download,
-        title: "Always latest version",
-        body: "Fetches the current public CRX file package directly from the source."
-      },
-      {
-        icon: ShieldCheck,
-        title: "Privacy-first",
-        body: "No account, no persistent file storage, no download tracking."
-      }
-    ]
-  },
   faq: {
     title: "CRX File FAQ",
     subtitle: "Common questions about downloading, extracting, and getting CRX files.",
     items: [
       {
         q: "What is a CRX file?",
-        a: "A CRX file is the official package format for Chromium-based browser extensions: a signed container with a ZIP payload holding source files."
+        a: "A CRX file is the official package format Chromium browsers use to distribute extensions. It works like a signed ZIP archive with a browser-verifiable header and contains extension source files. When you install from Chrome Web Store, the browser downloads this package in the background, but store pages do not provide a direct download button. CRX files matter for developers auditing permissions, users making backups, and IT teams managing browsers. A CRX extractor can unpack the package into JavaScript, HTML, CSS, assets, and manifest.json."
       },
       {
         q: "What is the difference between .crx and .zip?",
@@ -289,14 +254,6 @@ const chinese: Copy = {
     note: "下载内容来自官方应用商店公开接口，仅供学习、备份和安全审计使用。",
     partial: "该插件的商店元信息有限，但仍可尝试从官方端点下载文件。"
   },
-  learn: {
-    title: "什么是 CRX File？",
-    paragraphs: [
-      "CRX file 是 Chromium 系浏览器用于分发和安装扩展的标准打包格式，Google Chrome、Microsoft Edge、Brave 和 Opera 都使用这一格式。每个 CRX file 本质上都是带有加密签名头的 ZIP 归档，浏览器会在安装前验证它。",
-      "当你从 Chrome Web Store 安装扩展时，浏览器会在后台下载并处理 CRX file。但商店页面通常没有官方下载按钮，因此 CRXFile 这样的 CRX file downloader 可以帮助你直接获取公开扩展包。",
-      "理解 CRX file 结构对开发者审查权限、用户备份可信扩展、IT 管理员管理浏览器配置都很有用。通过 CRX extractor，你可以把 CRX file 解包为 JavaScript、HTML、CSS 和关键的 manifest.json 等源码组件。"
-    ]
-  },
   guide: {
     title: "如何下载 CRX 文件",
     subtitle:
@@ -355,40 +312,13 @@ const chinese: Copy = {
     outro:
       "使用 CRX file extractor 是扩展安全审计中的常见做法。开发者也可以借此学习热门扩展的构建方式，理解 CRX file 架构和 Chrome Extension API。"
   },
-  why: {
-    title: "为什么使用 CRXFile？",
-    intro:
-      "CRXFile 是一个 CRX downloader，可以替你处理 Chrome 和 Edge 的商店更新端点。",
-    items: [
-      {
-        icon: Globe2,
-        title: "双商店支持",
-        body: "一个工具同时支持 Chrome Web Store 和 Microsoft Edge Add-ons。"
-      },
-      {
-        icon: PackageCheck,
-        title: "无需安装插件",
-        body: "CRXFile 直接在浏览器中运行，不需要额外插件即可 download CRX 文件。"
-      },
-      {
-        icon: Download,
-        title: "始终获取最新版本",
-        body: "每次请求都会获取当前公开发布的 CRX file 安装包。"
-      },
-      {
-        icon: ShieldCheck,
-        title: "隐私优先",
-        body: "无需账号、不持久化存储文件，也不跟踪下载记录。"
-      }
-    ]
-  },
   faq: {
     title: "CRX File FAQ",
     subtitle: "关于下载、提取和 get CRX files 的常见问题。",
     items: [
       {
         q: "什么是 CRX file？",
-        a: "CRX file 是 Chromium 系浏览器扩展的官方打包格式，是一个带签名信息的容器，内部包含扩展源码文件。"
+        a: "CRX file 是 Chromium 系浏览器用于分发和安装扩展的官方打包格式，Google Chrome、Microsoft Edge、Brave 和 Opera 都使用这一格式。每个 CRX file 本质上都是带有加密签名头的 ZIP 归档，浏览器会在安装前验证它，内部包含扩展源码文件。当你从 Chrome Web Store 安装扩展时，浏览器会在后台下载并处理 CRX file，但商店页面通常没有官方下载按钮。理解 CRX file 结构对开发者审查权限、用户备份可信扩展、IT 管理员管理浏览器配置都很有用。通过 CRX extractor，你可以把 CRX file 解包为 JavaScript、HTML、CSS 和关键的 manifest.json 等源码组件。"
       },
       {
         q: ".crx 和 .zip 有什么区别？",
@@ -725,15 +655,6 @@ export function CrxFileApp() {
           </div>
         </section>
 
-        <section className="content-section">
-          <div className="section-inner text-content">
-            <h2>{t.learn.title}</h2>
-            {t.learn.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </section>
-
         <section className="guide-section" id="guide">
           <div className="section-inner">
             <div className="section-heading">
@@ -811,25 +732,6 @@ export function CrxFileApp() {
                   <span>{item}</span>
                 </li>
               ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="content-section why-section">
-          <div className="section-inner text-content">
-            <h2>{t.why.title}</h2>
-            <p>{t.why.intro}</p>
-            <ul className="benefit-grid">
-              {t.why.items.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <li key={item.title}>
-                    <Icon size={21} aria-hidden="true" />
-                    <strong>{item.title}</strong>
-                    <p>{item.body}</p>
-                  </li>
-                );
-              })}
             </ul>
           </div>
         </section>

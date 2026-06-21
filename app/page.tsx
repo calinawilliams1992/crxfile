@@ -9,7 +9,7 @@ const faqSchema = {
       name: "What is a CRX file?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A CRX file is the official package format for Chromium-based browser extensions. It is a signed container with a ZIP payload holding all extension source files."
+        text: "A CRX file is the official package format Chromium browsers use to distribute extensions. It works like a signed ZIP archive with a browser-verifiable header and contains extension source files. When you install from Chrome Web Store, the browser downloads this package in the background, but store pages do not provide a direct download button. CRX files matter for developers auditing permissions, users making backups, and IT teams managing browsers. A CRX extractor can unpack the package into JavaScript, HTML, CSS, assets, and manifest.json."
       }
     },
     {
