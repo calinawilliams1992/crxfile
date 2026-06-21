@@ -41,12 +41,9 @@ type Copy = typeof english;
 
 const english = {
   nav: {
-    tool: "CRX Downloader",
-    guide: "Guide",
-    faq: "FAQ"
+    tool: "CRX Downloader"
   },
   hero: {
-    eyebrow: "Chrome Web Store + Edge Add-ons",
     title: "Download CRX Files from Any Chrome Extension",
     subtitle:
       "Free CRX file extractor and CRX downloader. Paste any extension link to get CRX or ZIP source. No login.",
@@ -207,12 +204,9 @@ const english = {
 
 const chinese: Copy = {
   nav: {
-    tool: "CRX 下载器",
-    guide: "指南",
-    faq: "FAQ"
+    tool: "CRX 下载器"
   },
   hero: {
-    eyebrow: "Chrome Web Store + Edge Add-ons",
     title: "从任意 Chrome 扩展下载 CRX 文件",
     subtitle:
       "免费 CRX file extractor 与 CRX downloader。粘贴扩展链接即可 get CRX 或源码 ZIP，无需登录。",
@@ -524,12 +518,6 @@ export function CrxFileApp() {
           <span>CRXFile</span>
         </a>
 
-        <nav className="nav-links" aria-label="Primary navigation">
-          <a href="#tool">{t.nav.tool}</a>
-          <a href="#guide">{t.nav.guide}</a>
-          <a href="#faq">{t.nav.faq}</a>
-        </nav>
-
         <div className="language-switch" ref={languageMenuRef}>
           <button
             className="language-trigger"
@@ -577,9 +565,6 @@ export function CrxFileApp() {
         <section className="tool-section" id="tool">
           <div className="section-inner tool-layout">
             <div className="intro-copy">
-              <p className="eyebrow">
-                {t.hero.eyebrow}
-              </p>
               <h1>{t.hero.title}</h1>
               <p className="hero-subtitle">{t.hero.subtitle}</p>
             </div>
