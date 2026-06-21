@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"]
     },
-    sitemap: "https://www.crxfile.xyz/sitemap.xml",
+    sitemap: "http://www.crxfile.xyz/sitemap/sitemap.xml",
     host: "https://www.crxfile.xyz"
   };
 }
