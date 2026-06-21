@@ -818,17 +818,118 @@ summary:focus-visible {
   color: var(--brand);
 }
 
+.content-section,
 .guide-section,
 .faq-section {
   padding: 70px 0;
+}
+
+.content-section {
+  border-top: 1px solid var(--line);
+  background: var(--bg);
 }
 
 .guide-section {
   background: color-mix(in srgb, var(--surface) 55%, var(--bg));
 }
 
+.extractor-section {
+  background: var(--surface);
+}
+
+.why-section {
+  background: var(--bg);
+}
+
 .faq-section {
   border-top: 1px solid var(--line);
+}
+
+.text-content {
+  max-width: 860px;
+}
+
+.text-content h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(30px, 3.4vw, 42px);
+  line-height: 1.12;
+}
+
+.text-content p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.split-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.feature-list,
+.benefit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list {
+  display: grid;
+  gap: 10px;
+}
+
+.feature-list li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-subtle);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.feature-list svg {
+  margin-top: 2px;
+  color: var(--success);
+}
+
+.benefit-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+  counter-reset: benefit;
+}
+
+.benefit-list li {
+  position: relative;
+  padding: 0 0 0 34px;
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+.benefit-list li::before {
+  counter-increment: benefit;
+  content: counter(benefit);
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 820;
 }
 
 .section-heading {
@@ -866,7 +967,7 @@ summary:focus-visible {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 22px;
 }
@@ -906,10 +1007,16 @@ summary:focus-visible {
 }
 
 .step-card p {
-  margin: 16px 0 0;
+  margin: 8px 0 0;
   color: var(--ink);
   line-height: 1.55;
-  font-weight: 700;
+  font-weight: 650;
+}
+
+.step-card h3 {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .usage-notes {
@@ -1047,6 +1154,11 @@ summary:focus-visible {
     padding: 0 24px;
   }
 
+  .split-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
   .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1144,6 +1256,7 @@ summary:focus-visible {
     border-left: 0;
   }
 
+  .content-section,
   .guide-section,
   .faq-section {
     padding: 50px 0;
