@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | CRXFile"
   },
   description:
-    "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons. Download CRX files with no login.",
+    "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. Download CRX files with no login required.",
   keywords: [
     "crx file",
     "crx extractor",

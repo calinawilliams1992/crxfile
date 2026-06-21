@@ -42,15 +42,14 @@ type Copy = typeof english;
 const english = {
   nav: {
     tool: "CRX Downloader",
-    guide: "How to Get CRX",
-    faq: "CRX File FAQ"
+    guide: "Guide",
+    faq: "FAQ"
   },
   hero: {
-    eyebrow: "Free online CRX file extractor",
-    title: "Download CRX Files Instantly - Free Online CRX File Extractor & CRX Downloader",
+    eyebrow: "Chrome Web Store + Edge Add-ons",
+    title: "Download CRX Files from Any Chrome Extension",
     subtitle:
-      "Paste a public Chrome Web Store or Microsoft Edge Add-ons link, and CRXFile returns the official CRX file package plus the unpacked ZIP source. No login, no account, no limits - just download CRX files the simple way.",
-    badges: ["CRX file downloader", "CRX extractor", "Get CRX", "Download CRX"],
+      "Free CRX file extractor and CRX downloader. Paste any extension link to get CRX or ZIP source. No login.",
     trust: [
       { icon: ShieldCheck, label: "Official store packages" },
       { icon: LockKeyhole, label: "No account required" },
@@ -91,7 +90,7 @@ const english = {
       "Store metadata is limited for this extension. You can still try the official package download."
   },
   learn: {
-    title: "What Is a CRX File? A Complete CRX File Guide",
+    title: "What Is a CRX File?",
     paragraphs: [
       "A CRX file is the package format Chromium browsers use to distribute extensions. It works like a signed ZIP archive with a browser-verifiable header.",
       "When you install from the Chrome Web Store, the browser downloads this package in the background. Store pages do not offer a direct download button, which is why a dedicated CRX file downloader like CRXFile exists.",
@@ -99,7 +98,7 @@ const english = {
     ]
   },
   guide: {
-    title: "How to Download CRX Files from Chrome Web Store & Edge",
+    title: "How to Download a CRX File",
     subtitle:
       "CRXFile works as a CRX downloader and CRX extractor in one workflow. Follow these steps to get CRX from a public extension listing.",
     chromeTab: "Chrome",
@@ -113,36 +112,36 @@ const english = {
     steps: {
       chrome: [
         {
-          title: "Step 1: Find the Extension and Copy the URL",
+          title: "Find the Extension",
           body: "Open the Chrome Web Store page for the extension you want, then copy the full URL or 32-character extension ID."
         },
         {
-          title: "Step 2: Paste into the CRX File Downloader",
+          title: "Paste into CRXFile",
           body: "Paste the URL or ID into CRXFile. The tool queries the official update endpoint to locate the latest package."
         },
         {
-          title: "Step 3: Get CRX or Extract ZIP Source",
+          title: "Get CRX or Extract ZIP",
           body: "Choose Download CRX for manual installation, or download ZIP source when you want CRX extractor output for code review."
         }
       ],
       edge: [
         {
-          title: "Step 1: Find the Add-on and Copy the URL",
+          title: "Find the Add-on",
           body: "Open the Microsoft Edge Add-ons page for the extension you want, then copy the full URL or extension ID."
         },
         {
-          title: "Step 2: Paste into the CRX File Downloader",
+          title: "Paste into CRXFile",
           body: "Paste the Edge URL or ID into CRXFile. The CRX downloader resolves the public package from the official endpoint."
         },
         {
-          title: "Step 3: Get CRX or Extract ZIP Source",
+          title: "Get CRX or Extract ZIP",
           body: "Download CRX for manual Edge installation, or use the ZIP option when you need CRX extractor source files."
         }
       ]
     }
   },
   extractor: {
-    title: "CRX File Extractor: How to Inspect Extension Source Code",
+    title: "Inspect Source with the CRX Extractor",
     paragraphs: [
       "When you select ZIP, CRXFile acts as a CRX extractor. The archive contains the CRX file source minus the store signature.",
       "Open the folder in a code editor and start with manifest.json, which declares permissions, content scripts, background workers, and other metadata."
@@ -157,19 +156,35 @@ const english = {
       "This workflow is common in extension security auditing and useful for learning Chrome Extension APIs."
   },
   why: {
-    title: "Why Use a CRX Downloader Instead of Manual Methods?",
+    title: "Why Use CRXFile?",
     intro:
-      "Manual download URLs require internal store update endpoint details, and those details differ between Chrome and Edge. A dedicated CRX downloader handles that complexity.",
+      "CRXFile is a CRX downloader that handles store update endpoints for you across Chrome and Edge.",
     items: [
-      "Dual-store support - one tool for Chrome Web Store and Microsoft Edge Add-ons.",
-      "No plugin needed - CRXFile runs in the browser; install nothing to download CRX files.",
-      "Latest version - each request fetches the current CRX file package directly from the source.",
-      "Privacy-first workflow - no account registration, persistent file storage, or tracking."
+      {
+        icon: Globe2,
+        title: "Dual-store support",
+        body: "One tool for Chrome Web Store and Microsoft Edge Add-ons."
+      },
+      {
+        icon: PackageCheck,
+        title: "No plugin needed",
+        body: "Runs in your browser. Install nothing to download CRX files."
+      },
+      {
+        icon: Download,
+        title: "Always latest version",
+        body: "Fetches the current public CRX file package directly from the source."
+      },
+      {
+        icon: ShieldCheck,
+        title: "Privacy-first",
+        body: "No account, no persistent file storage, no download tracking."
+      }
     ]
   },
   faq: {
-    title: "CRX File FAQ - Extract, Download & Get CRX Answers",
-    subtitle: "Straight answers for CRX file downloader, CRX extractor, and source review workflows.",
+    title: "CRX File FAQ",
+    subtitle: "Common questions about downloading, extracting, and getting CRX files.",
     items: [
       {
         q: "What is a CRX file?",
@@ -228,15 +243,14 @@ const english = {
 const chinese: Copy = {
   nav: {
     tool: "CRX 下载器",
-    guide: "如何获取 CRX",
-    faq: "CRX 文件 FAQ"
+    guide: "指南",
+    faq: "FAQ"
   },
   hero: {
-    eyebrow: "免费在线 CRX file 提取器",
-    title: "即时下载 CRX 文件 - 免费在线 CRX File 提取器与下载器",
+    eyebrow: "Chrome Web Store + Edge Add-ons",
+    title: "从任意 Chrome 扩展下载 CRX 文件",
     subtitle:
-      "粘贴公开的 Chrome Web Store 或 Microsoft Edge Add-ons 链接，CRXFile 会返回官方 CRX file 安装包和解包后的源码 ZIP。无需登录、无需账号，直接 download CRX 文件。",
-    badges: ["CRX file downloader", "CRX extractor", "Get CRX", "Download CRX"],
+      "免费 CRX file extractor 与 CRX downloader。粘贴扩展链接即可 get CRX 或源码 ZIP，无需登录。",
     trust: [
       { icon: ShieldCheck, label: "来自官方商店公开接口" },
       { icon: LockKeyhole, label: "无需账号" },
@@ -276,7 +290,7 @@ const chinese: Copy = {
     partial: "该插件的商店元信息有限，但仍可尝试从官方端点下载文件。"
   },
   learn: {
-    title: "什么是 CRX File？完整 CRX 文件指南",
+    title: "什么是 CRX File？",
     paragraphs: [
       "CRX file 是 Chromium 系浏览器用于分发和安装扩展的标准打包格式，Google Chrome、Microsoft Edge、Brave 和 Opera 都使用这一格式。每个 CRX file 本质上都是带有加密签名头的 ZIP 归档，浏览器会在安装前验证它。",
       "当你从 Chrome Web Store 安装扩展时，浏览器会在后台下载并处理 CRX file。但商店页面通常没有官方下载按钮，因此 CRXFile 这样的 CRX file downloader 可以帮助你直接获取公开扩展包。",
@@ -284,7 +298,7 @@ const chinese: Copy = {
     ]
   },
   guide: {
-    title: "如何从 Chrome Web Store 和 Edge 下载 CRX 文件",
+    title: "如何下载 CRX 文件",
     subtitle:
       "CRXFile 同时是 CRX downloader 和 CRX extractor，一套流程即可从公开扩展页面 get CRX 文件或提取源码 ZIP。",
     chromeTab: "Chrome",
@@ -298,36 +312,36 @@ const chinese: Copy = {
     steps: {
       chrome: [
         {
-          title: "第 1 步：找到扩展并复制 URL",
+          title: "找到扩展",
           body: "打开目标扩展的 Chrome Web Store 页面，复制地址栏完整链接。CRXFile 也支持直接输入 32 位扩展 ID。"
         },
         {
-          title: "第 2 步：粘贴到 CRX File Downloader",
+          title: "粘贴到 CRXFile",
           body: "把 URL 或 ID 粘贴到 CRXFile。工具会请求官方商店更新端点，定位最新的 CRX file 安装包。"
         },
         {
-          title: "第 3 步：Get CRX 或提取 ZIP 源码",
+          title: "Get CRX 或提取 ZIP",
           body: "选择下载 CRX 用于手动安装，或下载 ZIP 作为 CRX extractor 输出进行代码审查。"
         }
       ],
       edge: [
         {
-          title: "第 1 步：找到加载项并复制 URL",
+          title: "找到加载项",
           body: "打开目标扩展的 Microsoft Edge Add-ons 页面，然后复制浏览器地址栏完整链接。"
         },
         {
-          title: "第 2 步：粘贴到 CRX File Downloader",
+          title: "粘贴到 CRXFile",
           body: "把 Edge URL 或扩展 ID 粘贴到 CRXFile。CRX downloader 会从官方端点解析公开安装包。"
         },
         {
-          title: "第 3 步：Get CRX 或提取 ZIP 源码",
+          title: "Get CRX 或提取 ZIP",
           body: "下载 CRX 可用于 Edge 手动安装，选择 ZIP 则可获得 CRX extractor 源码文件。"
         }
       ]
     }
   },
   extractor: {
-    title: "CRX File Extractor：如何检查扩展源码",
+    title: "使用 CRX Extractor 检查源码",
     paragraphs: [
       "当你选择 ZIP 选项时，CRXFile 就会作为 CRX extractor 使用。下载的 ZIP 包含扩展完整解包源码，除了商店签名头之外，内容与开发者上传的扩展文件一致。",
       "开始源码审查时，先解压归档并用代码编辑器打开文件夹。建议从 manifest.json 入手，它声明了扩展权限、内容脚本、后台 service worker 和其他关键元数据。"
@@ -342,19 +356,35 @@ const chinese: Copy = {
       "使用 CRX file extractor 是扩展安全审计中的常见做法。开发者也可以借此学习热门扩展的构建方式，理解 CRX file 架构和 Chrome Extension API。"
   },
   why: {
-    title: "为什么使用 CRX Downloader，而不是手动拼接下载地址？",
+    title: "为什么使用 CRXFile？",
     intro:
-      "手动构造扩展下载地址需要理解商店内部更新端点格式，而 Chrome 和 Edge 的细节并不完全相同，且未来可能变化。专用 CRX downloader 可以把这些复杂性隐藏起来。",
+      "CRXFile 是一个 CRX downloader，可以替你处理 Chrome 和 Edge 的商店更新端点。",
     items: [
-      "双商店支持 - 一个 CRX file downloader 同时支持 Chrome Web Store 和 Microsoft Edge Add-ons。",
-      "无需安装扩展 - CRXFile 直接在浏览器中运行，不需要额外插件即可 download CRX 文件。",
-      "始终获取最新版本 - 每次请求都会获取当前公开发布的安装包，让你直接从源头 get CRX。",
-      "隐私优先 - 无需账号注册、不持久化存储文件，也不跟踪下载记录。"
+      {
+        icon: Globe2,
+        title: "双商店支持",
+        body: "一个工具同时支持 Chrome Web Store 和 Microsoft Edge Add-ons。"
+      },
+      {
+        icon: PackageCheck,
+        title: "无需安装插件",
+        body: "CRXFile 直接在浏览器中运行，不需要额外插件即可 download CRX 文件。"
+      },
+      {
+        icon: Download,
+        title: "始终获取最新版本",
+        body: "每次请求都会获取当前公开发布的 CRX file 安装包。"
+      },
+      {
+        icon: ShieldCheck,
+        title: "隐私优先",
+        body: "无需账号、不持久化存储文件，也不跟踪下载记录。"
+      }
     ]
   },
   faq: {
-    title: "CRX File FAQ - 提取、下载与 Get CRX 问答",
-    subtitle: "关于 CRX file downloader、CRX extractor 和源码审查流程的核心问题。",
+    title: "CRX File FAQ",
+    subtitle: "关于下载、提取和 get CRX files 的常见问题。",
     items: [
       {
         q: "什么是 CRX file？",
@@ -622,11 +652,6 @@ export function CrxFileApp() {
               </p>
               <h1>{t.hero.title}</h1>
               <p className="hero-subtitle">{t.hero.subtitle}</p>
-              <div className="keyword-row" aria-label="Supported search intents">
-                {t.hero.badges.map((badge) => (
-                  <span key={badge}>{badge}</span>
-                ))}
-              </div>
             </div>
 
             <div className="tool-workspace" aria-label="CRX downloader tool">
@@ -794,10 +819,17 @@ export function CrxFileApp() {
           <div className="section-inner text-content">
             <h2>{t.why.title}</h2>
             <p>{t.why.intro}</p>
-            <ul className="benefit-list">
-              {t.why.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+            <ul className="benefit-grid">
+              {t.why.items.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <li key={item.title}>
+                    <Icon size={21} aria-hidden="true" />
+                    <strong>{item.title}</strong>
+                    <p>{item.body}</p>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
