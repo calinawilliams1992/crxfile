@@ -124,7 +124,7 @@ const english: Copy = {
   hero: {
     title: "Download CRX Files from Any Chrome Extension",
     subtitle:
-      "Free CRX file extractor and CRX downloader. Paste any extension link to get CRX or ZIP source. No login.",
+      "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. No login required.",
     trust: [
       { icon: ShieldCheck, label: "Official store packages" },
       { icon: LockKeyhole, label: "No account required" },

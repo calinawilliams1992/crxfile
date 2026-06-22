@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | CRXFile"
   },
   description:
-    "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. Download CRX files with no login required.",
+    "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. No login required.",
   keywords: [
     "crx file",
     "crx extractor",
@@ -17,22 +17,21 @@ export const metadata: Metadata = {
     "crx downloader",
     "download crx",
     "download crx file",
-    "Chrome extension source code",
-    "Edge add-ons downloader"
+    "extension source code"
   ],
   openGraph: {
     type: "website",
     url: "https://www.crxfile.xyz",
     title: "CRX File Extractor & Downloader — Get CRX Files Free Online",
     description:
-      "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly.",
+      "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. No login required.",
     siteName: "CRXFile"
   },
   twitter: {
     card: "summary",
     title: "CRX File Extractor & Downloader — Get CRX Files Free Online",
     description:
-      "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly."
+      "Free online CRX file extractor and CRX downloader. Get CRX and ZIP source files from Chrome Web Store and Edge Add-ons instantly. No login required."
   },
   icons: {
     icon: "/favicon.svg"
