@@ -71,34 +71,83 @@ CRXFile can only download public extension packages exposed by official store en
 
 Downloaded files should be used for learning, personal backup, security review, or legitimate internal browser extension management. Users are responsible for respecting extension licenses and applicable laws.
 
-## 中文说明
-
-CRXFile 是一个免费的在线 CRX 文件提取器和 CRX 下载工具，支持从 Chrome Web Store 和 Microsoft Edge Add-ons 获取公开浏览器插件的安装包。
-
-网站地址：http://www.crxfile.xyz/
-
-你可以使用 CRXFile 下载 `.crx` 离线安装包，也可以下载 `.zip` 源码包，用于查看插件源码、学习开发、安全审计、个人备份或企业内部浏览器插件管理。
-
-## 中文功能
-
-- 下载公开 Chrome 插件的 `.crx` 文件。
-- 将插件源码提取为 `.zip` 文件。
-- 支持 Chrome Web Store 和 Microsoft Edge Add-ons 链接。
-- 支持粘贴插件页面 URL 或 32 位扩展 ID。
-- 提供英文和中文页面，便于搜索引擎收录。
-- 提供完善的 metadata、robots.txt 和 sitemap.xml。
-- 无需注册、无需登录，不长期保存下载文件。
-
-## 中文 SEO 关键词
-
-CRX文件下载、Chrome插件下载、CRX文件提取器、Chrome插件离线安装、插件源码下载、Edge插件下载、CRX转ZIP
-
-## 重要说明
-
-CRXFile 只能获取官方商店当前公开可访问的插件文件，不能绕过付费授权、私有列表、企业限制、已下架插件或其他访问控制。
-
-下载后的文件请用于学习研究、个人备份、安全审计或合法的企业内部管理。使用者需要自行遵守插件许可协议和相关法律法规。
-
 ## License
 
 This project is released under the MIT License.
+
+## 中文版
+
+CRXFile 是一个免费的在线 CRX 文件提取器和 CRX 下载工具，适用于 Chrome Web Store 和 Microsoft Edge Add-ons 中公开发布的浏览器扩展。
+
+网站地址：http://www.crxfile.xyz/
+
+你可以使用 CRXFile 获取 CRX 文件、下载 ZIP 源码包、查看扩展源码，并为公开浏览器扩展保留本地备份。这个工具主要面向开发者、安全审查人员、IT 管理员，以及希望在无需登录的情况下便捷下载 CRX 文件的用户。
+
+### 功能特性
+
+- 将公开的 Chrome 扩展下载为 `.crx` 文件。
+- 将扩展源码提取并下载为 `.zip` 文件。
+- 支持 Chrome Web Store 和 Microsoft Edge Add-ons 的扩展链接。
+- 支持解析扩展页面链接或 32 位扩展 ID。
+- 提供英文和中文页面，兼顾 SEO 与国际用户访问。
+- 生成适合搜索引擎抓取的 metadata、robots.txt 和 sitemap.xml 路由。
+- 无需用户账号、无需注册，也不会长期保存下载文件。
+
+### SEO 关键词
+
+crx file, crx extractor, get crx, crx downloader, download crx, download crx file, extension source code
+
+### 技术栈
+
+- Next.js
+- React
+- TypeScript
+- 适配 Vercel 部署的路由和 API 处理器
+
+### 快速开始
+
+安装依赖：
+
+```bash
+npm install
+```
+
+启动开发服务器：
+
+```bash
+npm run dev
+```
+
+运行类型检查：
+
+```bash
+npm run typecheck
+```
+
+构建生产版本：
+
+```bash
+npm run build
+```
+
+### 项目结构
+
+```text
+app/
+  (en)/                 英文首页和 metadata
+  zh/                   中文首页和 metadata
+  api/                  下载与解析相关的 API 路由
+  components/           共享 UI 组件
+  robots.ts             robots.txt 路由
+  sitemap/              sitemap.xml 路由
+```
+
+### 使用说明
+
+CRXFile 只能下载官方商店接口当前公开提供的扩展安装包。它不能绕过付费访问、私有列表、企业限制、已下架扩展或其他访问控制。
+
+下载的文件应仅用于学习、个人备份、安全审查，或合法的企业内部浏览器扩展管理。使用者需要自行遵守扩展许可协议和适用法律。
+
+### 许可证
+
+本项目基于 MIT License 开源发布。
