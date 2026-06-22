@@ -16,10 +16,6 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
 
-## SEO Keywords
-
-crx file, crx extractor, get crx, crx downloader, download crx, download crx file, extension source code
-
 ## Tech Stack
 
 - Next.js
@@ -92,10 +88,6 @@ CRXFile 是一个免费的在线 CRX 文件提取器和 CRX 下载工具，适�
 - 提供英文和中文页面，兼顾 SEO 与国际用户访问。
 - 生成适合搜索引擎抓取的 metadata、robots.txt 和 sitemap.xml 路由。
 - 无需用户账号、无需注册，也不会长期保存下载文件。
-
-### SEO 关键词
-
-crx file, crx extractor, get crx, crx downloader, download crx, download crx file, extension source code
 
 ### 技术栈
 
