@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PackageCheck } from "lucide-react";
+import { SiteFooter } from "@/app/components/SiteFooter";
 
 const publishedAt = "2026-07-25T00:00:00.000Z";
 
@@ -253,17 +254,7 @@ export default function BlogPage() {
         </article>
       </main>
 
-      <footer className="site-footer">
-        <div>
-          <strong>CRXFile</strong>
-          <p>Download public extension packages for learning, permitted backup, and security review.</p>
-        </div>
-        <div className="footer-links">
-          <a href="/#tool">CRX File Downloader</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

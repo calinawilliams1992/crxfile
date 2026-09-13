@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageLayout
       title="Privacy Policy"
-      summary="This notice explains what CRXFile processes to provide the downloader and the choices you have over optional analytics."
+      summary="This notice explains what CRXFile processes to provide the downloader, including its use of analytics."
       effectiveDate={effectiveDate}
     >
       <section>
@@ -55,17 +55,11 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <section>
-        <h2>Optional analytics and local storage</h2>
+        <h2>Analytics and cookies</h2>
         <p>
-          We use Google Analytics 4 only after you choose “Accept analytics” in the site prompt.
-          If you decline, the downloader remains available and the Google Analytics script is not
-          loaded by CRXFile. Your choice is saved in your browser&apos;s local storage so we can
-          remember it on later visits.
-        </p>
-        <p>
-          If you accept, Google may process usage, browser, device, and cookie information under
-          its own policies. You can change or clear that preference by clearing this site&apos;s local
-          storage in your browser. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>{" "}
+          CRXFile uses Google Analytics 4 to understand how visitors use the site and improve the
+          downloader. Google may process usage, browser, device, and cookie information under its
+          own policies. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>{" "}
           for information about Google&apos;s processing.
         </p>
       </section>

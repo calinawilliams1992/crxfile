@@ -1,5 +1,6 @@
 import { PackageCheck } from "lucide-react";
 import type { ReactNode } from "react";
+import { SiteFooter } from "./SiteFooter";
 
 type LegalPageLayoutProps = {
   title: string;
@@ -51,17 +52,7 @@ export function LegalPageLayout({
         </article>
       </main>
 
-      <footer className="site-footer">
-        <div>
-          <strong>CRXFile</strong>
-          <p>Download public extension packages for learning, permitted backup, and security review.</p>
-        </div>
-        <div className="footer-links">
-          <a href="/#tool">CRX File Downloader</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

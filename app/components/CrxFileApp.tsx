@@ -20,6 +20,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { parseExtensionInput, storeName, type Store } from "@/lib/input";
+import { SiteFooter, type FooterLabels } from "./SiteFooter";
 
 type Lang = "en" | "zh";
 
@@ -111,10 +112,7 @@ type Copy = {
     subtitle: string;
     items: Array<{ q: string; a: string }>;
   };
-  footer: {
-    disclaimer: string;
-    legal: string;
-  };
+  footer: FooterLabels;
 };
 
 const english: Copy = {
@@ -273,10 +271,19 @@ const english: Copy = {
     ]
   },
   footer: {
+    tagline:
+      "A simple way to retrieve public Chrome and Edge extension packages for backup, source review, and legitimate development.",
+    product: "Product",
+    resources: "Resources",
+    legal: "Legal",
+    downloader: "CRX File Downloader",
+    guide: "How it works",
+    blog: "Blog",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    copyright: "© 2026 CRXFile. All rights reserved.",
     disclaimer:
-      "CRXFile is not a Google or Microsoft product and is not affiliated with either company. All trademarks belong to their owners.",
-    legal:
-      "Use this tool only for learning, security audit, personal backup, and legitimate administration. You are responsible for how downloaded files are used."
+      "CRXFile is independent from Google and Microsoft. Chrome and Edge trademarks belong to their respective owners."
   }
 };
 
@@ -455,10 +462,19 @@ const chinese: Copy = {
     ]
   },
   footer: {
+    tagline:
+      "为公开的 Chrome 和 Edge 插件提供便捷的安装包获取方式，适用于备份、源码审查和合法开发。",
+    product: "产品",
+    resources: "资源",
+    legal: "法律",
+    downloader: "CRX 下载器",
+    guide: "使用指南",
+    blog: "Blog",
+    privacy: "隐私政策",
+    terms: "服务条款",
+    copyright: "© 2026 CRXFile. 保留所有权利。",
     disclaimer:
-      "CRXFile 是独立的第三方工具，与 Google、Microsoft 无任何关联，所有相关商标归原始所有权方所有。",
-    legal:
-      "本工具仅供合法用途使用：包括插件学习研究、安全审计、个人备份及合规管理。使用者需自行对所下载内容的使用行为负责。"
+      "CRXFile 是独立的第三方工具，与 Google、Microsoft 无关联，Chrome 和 Edge 商标归各自所有者所有。"
   }
 };
 
@@ -833,18 +849,11 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div>
-          <strong>CRXFile</strong>
-          <p>{t.footer.disclaimer}</p>
-          <p>{t.footer.legal}</p>
-        </div>
-        <div className="footer-links">
-          <a href="#tool">{t.nav.tool}</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-        </div>
-      </footer>
+      <SiteFooter
+        labels={t.footer}
+        toolHref={lang === "zh" ? "/zh#tool" : "/#tool"}
+        guideHref={lang === "zh" ? "/zh#guide" : "/#guide"}
+      />
     </div>
   );
 }
