@@ -170,9 +170,9 @@ const english: Copy = {
       "CRXFile works as a CRX downloader and CRX extractor in one workflow. Follow these steps to get CRX from a public extension listing.",
     chromeTab: "Chrome",
     edgeTab: "Edge",
-    installTitle: "Install a CRX File Manually",
+    installTitle: "Use a ZIP Source Package for Local Testing",
     installBody:
-      "Open chrome://extensions or edge://extensions, enable Developer mode, then drag the downloaded CRX file into the extensions page.",
+      "Modern Chrome and Edge can restrict local CRX installation. For ordinary use, install from the original store listing. For authorized development or testing, download ZIP, unpack it, then use Developer mode and Load unpacked.",
     zipTitle: "Use the CRX Extractor ZIP Source",
     zipBody:
       "Choose the ZIP format to skip the browser signature header and access manifest.json, background scripts, content scripts, and bundled assets directly.",
@@ -188,7 +188,7 @@ const english: Copy = {
         },
         {
           title: "Get CRX or Extract ZIP",
-          body: "Choose Download CRX for manual installation, or download ZIP source when you want CRX extractor output for code review."
+          body: "Choose Download CRX to retain the original package for backup or review, or download ZIP source when you want files for code review."
         }
       ],
       edge: [
@@ -202,7 +202,7 @@ const english: Copy = {
         },
         {
           title: "Get CRX or Extract ZIP",
-          body: "Download CRX for manual Edge installation, or use the ZIP option when you need CRX extractor source files."
+          body: "Download CRX to retain the original Edge package for backup or review, or use the ZIP option when you need source files."
         }
       ]
     }
@@ -232,11 +232,11 @@ const english: Copy = {
       },
       {
         q: "What is the difference between .crx and .zip?",
-        a: "A .crx keeps the browser signature header for manual installation. A .zip removes that header so source files can be opened directly."
+        a: "A .crx keeps the browser package header intact for backup and review. A .zip removes that header so source files can be opened directly."
       },
       {
         q: "Why can I not double-click a downloaded CRX file to install it?",
-        a: "Chrome and Edge restrict external installs. Open chrome://extensions or edge://extensions, enable Developer mode, and drag the downloaded file into the page."
+        a: "Chrome and Edge restrict external installs. For normal use, install from the official store listing. For authorized local testing, extract the ZIP source, enable Developer mode, and use Load unpacked."
       },
       {
         q: "Do I need to log in or pay to download CRX?",
@@ -332,9 +332,9 @@ const chinese: Copy = {
       "CRXFile 支持从 Chrome Web Store 和微软 Edge 扩展商店在线提取任意插件的 CRX 安装包或 ZIP 源码包，全程无需登录、无需注册。",
     chromeTab: "Chrome",
     edgeTab: "Edge",
-    installTitle: "如何手动安装 CRX 插件离线安装包（Chrome / Edge 通用）",
+    installTitle: "如何使用 ZIP 源码包进行本地测试",
     installBody:
-      "打开 chrome://extensions 或 edge://extensions，开启开发者模式，将下载好的 .crx 文件拖入扩展程序管理页面，并在弹窗中确认添加扩展程序。若新版浏览器限制 CRX 拖入安装，可下载 ZIP 源码包，解压后通过“加载已解压的扩展程序”方式安装。",
+      "新版 Chrome 和 Edge 可能限制本地 CRX 安装。日常使用请从原始商店页面安装；如需对已获授权的扩展进行开发或测试，请下载 ZIP 源码包，解压后开启开发者模式并选择“加载已解压的扩展程序”。",
     zipTitle: "如何使用 ZIP 源码包查看 Chrome 插件代码",
     zipBody:
       "下载 ZIP 源码包后，直接解压到本地文件夹，用 VS Code、Sublime Text 等代码编辑器打开即可查看完整源代码。建议先浏览 manifest.json，它声明了插件权限、注入脚本目标网站和后台进程配置。",
@@ -349,8 +349,8 @@ const chinese: Copy = {
           body: "将复制的插件链接或扩展 ID 粘贴到上方输入框，点击“立即下载”。工具会调用官方商店公开接口，获取该插件最新版本的 CRX 安装包信息。"
         },
         {
-          title: "第三步：选择下载 CRX 安装包或 ZIP 源码包",
-          body: "根据用途选择下载格式：CRX 文件用于手动离线安装到 Chrome / Edge 浏览器，ZIP 源码包用于查看插件源代码、学习开发或进行安全审查。"
+          title: "第三步：选择下载 CRX 包或 ZIP 源码包",
+          body: "根据用途选择下载格式：CRX 文件适合保留原始安装包以便备份或审查；ZIP 源码包用于查看插件源代码、学习开发、安全审查或已获授权的本地测试。"
         }
       ],
       edge: [
@@ -406,11 +406,11 @@ const chinese: Copy = {
       },
       {
         q: "CRX 文件和 ZIP 源码包有什么区别，分别用在什么场景？",
-        a: "CRX 文件保留浏览器可识别的签名头，主要用于手动离线安装 Chrome 插件或 Edge 插件。ZIP 源码包去除了安装包签名头，可以直接解压查看插件源代码，适合学习开发、安全审计和合规检查。"
+        a: "CRX 文件保留浏览器可识别的包头，适合保留原始安装包以便备份或审查。ZIP 源码包去除了安装包头，可以直接解压查看插件源代码，适合学习开发、安全审计、合规检查和已获授权的本地测试。"
       },
       {
         q: "下载的 CRX 插件文件为什么无法直接安装？怎么解决？",
-        a: "Chrome 和 Edge 默认限制外部插件安装，双击 CRX 文件通常不会触发安装。你可以打开 chrome://extensions 或 edge://extensions，开启开发者模式，再把 CRX 文件拖入扩展管理页面。如果浏览器版本限制拖入安装，可下载 ZIP 源码包，解压后选择“加载已解压的扩展程序”。"
+        a: "Chrome 和 Edge 默认限制外部插件安装，双击 CRX 文件通常不会触发安装。日常使用请从官方商店页面安装；如需对已获授权的扩展进行本地测试，可下载 ZIP 源码包并解压，然后开启开发者模式并选择“加载已解压的扩展程序”。"
       },
       {
         q: "下载 Chrome 插件 CRX 文件需要登录或付费吗？",
@@ -446,7 +446,7 @@ const chinese: Copy = {
       },
       {
         q: "如何用 ZIP 源码包方式离线安装 Chrome 插件？",
-        a: "先下载 ZIP 源码包并解压到本地文件夹，然后打开 chrome://extensions，开启开发者模式，点击“加载已解压的扩展程序”，选择解压后的文件夹即可。这个方式适合 CRX 拖入安装失败的情况。"
+        a: "先下载 ZIP 源码包并解压到本地文件夹，然后打开 chrome://extensions，开启开发者模式，点击“加载已解压的扩展程序”，选择解压后的文件夹即可。该方式适用于已获授权的扩展开发或本地测试。"
       },
       {
         q: "CRX 文件格式版本是什么？",
@@ -597,6 +597,11 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
           </span>
           <span>CRXFile</span>
         </a>
+
+        <nav className="primary-nav" aria-label="Primary navigation">
+          <a href="#tool">CRX File Downloader</a>
+          <a href="/blog">Blog</a>
+        </nav>
 
         <div className="language-switch" ref={languageMenuRef}>
           <button
@@ -834,7 +839,11 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
           <p>{t.footer.disclaimer}</p>
           <p>{t.footer.legal}</p>
         </div>
-        <a href="#tool">{t.nav.tool}</a>
+        <div className="footer-links">
+          <a href="#tool">{t.nav.tool}</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+        </div>
       </footer>
     </div>
   );

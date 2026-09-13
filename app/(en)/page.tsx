@@ -30,7 +30,7 @@ const faqSchema = {
       name: "What is the difference between .crx and .zip?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A .crx keeps the browser signature header intact and is used for manual extension installation. A .zip strips that header so the extension source files can be opened directly."
+        text: "A .crx keeps the browser package header intact for backup and review. A .zip strips that header so the extension source files can be opened directly."
       }
     },
     {
@@ -38,7 +38,7 @@ const faqSchema = {
       name: "Why can I not double-click a downloaded CRX file to install it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Chrome and Edge restrict external installs by design. To install a CRX file manually, open chrome://extensions or edge://extensions, enable Developer mode, and drag the CRX file into the extensions page."
+        text: "Chrome and Edge restrict external installs by design. For normal use, install from the official store listing. For authorized local testing, extract the ZIP source, enable Developer mode, and use Load unpacked."
       }
     },
     {

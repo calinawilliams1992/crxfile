@@ -63,7 +63,7 @@ const faqSchema = {
       name: "CRX 文件和 ZIP 源码包有什么区别，分别用在什么场景？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "CRX 文件保留浏览器可识别的签名头，主要用于手动离线安装 Chrome 插件或 Edge 插件。ZIP 源码包去除了安装包签名头，可以直接解压查看插件源代码，适合学习开发、安全审计和合规检查。"
+        text: "CRX 文件保留浏览器可识别的包头，适合保留原始安装包以便备份或审查。ZIP 源码包去除了安装包头，可以直接解压查看插件源代码，适合学习开发、安全审计、合规检查和已获授权的本地测试。"
       }
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "下载的 CRX 插件文件为什么无法直接安装？怎么解决？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Chrome 和 Edge 默认限制外部插件安装，双击 CRX 文件通常不会触发安装。你可以打开 chrome://extensions 或 edge://extensions，开启开发者模式，再把 CRX 文件拖入扩展管理页面。如果浏览器版本限制拖入安装，可下载 ZIP 源码包，解压后选择“加载已解压的扩展程序”。"
+        text: "Chrome 和 Edge 默认限制外部插件安装，双击 CRX 文件通常不会触发安装。日常使用请从官方商店页面安装；如需对已获授权的扩展进行本地测试，可下载 ZIP 源码包并解压，然后开启开发者模式并选择“加载已解压的扩展程序”。"
       }
     },
     {
@@ -143,7 +143,7 @@ const faqSchema = {
       name: "如何用 ZIP 源码包方式离线安装 Chrome 插件？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "先下载 ZIP 源码包并解压到本地文件夹，然后打开 chrome://extensions，开启开发者模式，点击“加载已解压的扩展程序”，选择解压后的文件夹即可。这个方式适合 CRX 拖入安装失败的情况。"
+        text: "先下载 ZIP 源码包并解压到本地文件夹，然后打开 chrome://extensions，开启开发者模式，点击“加载已解压的扩展程序”，选择解压后的文件夹即可。该方式适用于已获授权的扩展开发或本地测试。"
       }
     },
     {

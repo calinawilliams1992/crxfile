@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     "crx downloader",
     "download crx",
     "download crx file",
+    "chrome extension downloader",
+    "download chrome extension crx",
+    "extract crx file",
+    "crx to zip",
+    "download edge extension crx",
     "extension source code"
   ],
   openGraph: {

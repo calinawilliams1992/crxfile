@@ -13,6 +13,8 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Support Chrome Web Store and Microsoft Edge Add-ons URLs.
 - Parse extension links or 32-character extension IDs.
 - Provide English and Chinese pages for SEO and international users.
+- Publish a keyword-focused CRX download guide with internal links to the downloader.
+- Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
 
@@ -54,11 +56,14 @@ npm run build
 ```text
 app/
   (en)/                 English homepage and metadata
+    blog/               English CRX download guide
+    privacy-policy/     Privacy Policy
+    terms-of-service/   Terms of Service
   zh/                   Chinese homepage and metadata
   api/                  Download and parse API routes
   components/           Shared UI components
   robots.ts             robots.txt route
-  sitemap/              sitemap.xml route
+  sitemap.ts            Canonical sitemap.xml metadata route
 ```
 
 ## Usage Notes
