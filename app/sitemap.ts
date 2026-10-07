@@ -32,9 +32,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: SITE_URL + "/blog",
-      lastModified: new Date("2026-07-25T00:00:00.000Z"),
+      lastModified: new Date("2026-10-07T00:00:00.000Z"),
       changeFrequency: "monthly",
       priority: 0.8
+    },
+    {
+      url: SITE_URL + "/blog/find-chrome-extension-id",
+      lastModified: new Date("2026-10-07T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.7
     },
     {
       url: SITE_URL + "/privacy-policy",

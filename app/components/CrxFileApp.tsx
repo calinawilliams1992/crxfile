@@ -777,6 +777,12 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
               })}
             </div>
 
+            {lang === "en" ? (
+              <p className="guide-related-link">
+                Need the ID first? <a href="/blog/find-chrome-extension-id">Find a Chrome extension ID</a> in the store URL or Chrome&apos;s extension details.
+              </p>
+            ) : null}
+
             <div className="usage-notes">
               <article>
                 <h3>

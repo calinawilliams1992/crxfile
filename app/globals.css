@@ -876,6 +876,19 @@ summary:focus-visible {
   margin-top: 22px;
 }
 
+.guide-related-link {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.guide-related-link a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .step-card {
   min-height: 160px;
   padding: 18px;
@@ -1239,6 +1252,28 @@ summary:focus-visible {
   color: var(--ink);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.88em;
+}
+
+.id-example {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-subtle);
+}
+
+.id-example span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.id-example code {
+  overflow-wrap: anywhere;
+  width: fit-content;
+  margin-bottom: 8px;
 }
 
 .format-table {

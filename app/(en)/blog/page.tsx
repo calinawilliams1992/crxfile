@@ -3,6 +3,7 @@ import { PackageCheck } from "lucide-react";
 import { SiteFooter } from "@/app/components/SiteFooter";
 
 const publishedAt = "2026-07-25T00:00:00.000Z";
+const modifiedAt = "2026-10-07T00:00:00.000Z";
 
 export const metadata: Metadata = {
   title: "How to Download a CRX File from the Chrome Web Store",
@@ -46,7 +47,7 @@ const articleSchema = {
   description:
     "A practical guide to downloading public CRX packages or ZIP source files for backup, review, and legitimate extension development.",
   datePublished: publishedAt,
-  dateModified: publishedAt,
+  dateModified: modifiedAt,
   mainEntityOfPage: "https://www.crxfile.xyz/blog",
   inLanguage: "en",
   author: {
@@ -192,8 +193,8 @@ export default function BlogPage() {
             <ol className="article-steps">
               <li>
                 <strong>Copy a public extension URL or ID.</strong> Open the relevant Chrome Web
-                Store or Edge Add-ons listing and copy its complete URL. You can also use the
-                listing&apos;s 32-character extension ID.
+                Store or Edge Add-ons listing and copy its complete URL. For Chrome, you can also
+                <a href="/blog/find-chrome-extension-id"> find the listing&apos;s extension ID</a>.
               </li>
               <li>
                 <strong>Parse it with CRXFile.</strong> Paste the URL or ID into the{" "}
@@ -240,6 +241,15 @@ export default function BlogPage() {
               Use downloaded files responsibly: for learning, permitted backup, security review,
               and legitimate administration. Respect the extension&apos;s license and do not
               redistribute paid or protected content.
+            </p>
+          </section>
+
+          <section>
+            <h2>More Chrome extension guides</h2>
+            <p>
+              Need to identify a listing before you download anything? See our guide to
+              <a href="/blog/find-chrome-extension-id"> finding a Chrome extension ID</a> in a
+              store URL or on the installed extension&apos;s Details page.
             </p>
           </section>
 
