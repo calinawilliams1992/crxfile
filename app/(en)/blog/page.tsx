@@ -3,7 +3,7 @@ import { PackageCheck } from "lucide-react";
 import { SiteFooter } from "@/app/components/SiteFooter";
 
 const publishedAt = "2026-07-25T00:00:00.000Z";
-const modifiedAt = "2026-10-07T00:00:00.000Z";
+const modifiedAt = "2026-10-11T00:00:00.000Z";
 
 export const metadata: Metadata = {
   title: "How to Download a CRX File from the Chrome Web Store",
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
       "A practical guide to downloading public CRX packages or ZIP source files for backup, review, and legitimate extension development.",
     siteName: "CRXFile",
     publishedTime: publishedAt,
+    modifiedTime: modifiedAt,
     authors: ["CRXFile"]
   },
   twitter: {
@@ -245,11 +246,15 @@ export default function BlogPage() {
           </section>
 
           <section>
-            <h2>More Chrome extension guides</h2>
+            <h2>More extension guides</h2>
             <p>
               Need to identify a listing before you download anything? See our guide to
               <a href="/blog/find-chrome-extension-id"> finding a Chrome extension ID</a> in a
               store URL or on the installed extension&apos;s Details page.
+            </p>
+            <p>
+              For a Microsoft store listing, follow <a href="/blog/download-edge-extension-crx">How to Get a CRX from Microsoft Edge Add-ons</a>.
+              It includes a tested Edge download, CRX and ZIP results, and checks for common failures.
             </p>
           </section>
 

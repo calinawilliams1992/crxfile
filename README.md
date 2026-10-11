@@ -2,7 +2,7 @@
 
 CRXFile is a free online CRX file extractor and CRX downloader for Chrome Web Store and Microsoft Edge Add-ons extensions.
 
-Website: http://www.crxfile.xyz/
+Website: https://www.crxfile.xyz/
 
 Use CRXFile to get CRX files, download ZIP source packages, inspect extension source code, and keep a local backup of public browser extensions. The tool is designed for developers, security reviewers, IT administrators, and users who need a simple way to download CRX files without logging in.
 
@@ -14,6 +14,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Parse extension links or 32-character extension IDs.
 - Provide English and Chinese pages for SEO and international users.
 - Publish a keyword-focused CRX download guide with internal links to the downloader.
+- Include guides to finding Chrome extension IDs and downloading CRX packages from Microsoft Edge Add-ons.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
@@ -56,7 +57,7 @@ npm run build
 ```text
 app/
   (en)/                 English homepage and metadata
-    blog/               English CRX download guide
+    blog/               English download guide and individual extension tutorials
     privacy-policy/     Privacy Policy
     terms-of-service/   Terms of Service
   zh/                   Chinese homepage and metadata
@@ -80,7 +81,7 @@ This project is released under the MIT License.
 
 CRXFile 是一个免费的在线 CRX 文件提取器和 CRX 下载工具，适用于 Chrome Web Store 和 Microsoft Edge Add-ons 中公开发布的浏览器扩展。
 
-网站地址：http://www.crxfile.xyz/
+网站地址：https://www.crxfile.xyz/
 
 你可以使用 CRXFile 获取 CRX 文件、下载 ZIP 源码包、查看扩展源码，并为公开浏览器扩展保留本地备份。这个工具主要面向开发者、安全审查人员、IT 管理员，以及希望在无需登录的情况下便捷下载 CRX 文件的用户。
 
@@ -136,7 +137,7 @@ app/
   api/                  下载与解析相关的 API 路由
   components/           共享 UI 组件
   robots.ts             robots.txt 路由
-  sitemap/              sitemap.xml 路由
+  sitemap.ts            sitemap.xml 路由
 ```
 
 ### 使用说明

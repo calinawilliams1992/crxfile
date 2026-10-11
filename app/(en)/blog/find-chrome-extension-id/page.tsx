@@ -4,6 +4,7 @@ import { SiteFooter } from "@/app/components/SiteFooter";
 
 const url = "https://www.crxfile.xyz/blog/find-chrome-extension-id";
 const publishedAt = "2026-10-07T00:00:00.000Z";
+const modifiedAt = "2026-10-11T00:00:00.000Z";
 const title = "How to Find a Chrome Extension ID";
 const description =
   "Find a Chrome extension ID in its Web Store URL or in chrome://extensions. See a real 32-character example, check common mistakes, and learn what an ID identifies.";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     description,
     siteName: "CRXFile",
     publishedTime: publishedAt,
+    modifiedTime: modifiedAt,
     authors: ["CRXFile"]
   },
   twitter: { card: "summary", title, description }
@@ -30,7 +32,7 @@ const articleSchema = {
   headline: title,
   description,
   datePublished: publishedAt,
-  dateModified: publishedAt,
+  dateModified: modifiedAt,
   mainEntityOfPage: url,
   inLanguage: "en",
   author: { "@type": "Organization", name: "CRXFile" },
@@ -193,6 +195,11 @@ export default function FindChromeExtensionIdPage() {
               <a href="/#tool"> CRXFile tool</a>. Choose CRX for the package or ZIP for its extractable
               files. Our <a href="/blog">Chrome Web Store CRX download guide</a> covers that workflow.
               For ordinary installation, return to the official store listing.
+            </p>
+            <p>
+              Working with a Microsoft store listing instead? Use the full Edge URL and follow
+              <a href="/blog/download-edge-extension-crx"> our Edge Add-ons CRX download guide</a> to
+              select the right source and check the downloaded package.
             </p>
           </section>
 
