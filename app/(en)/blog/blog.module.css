@@ -1,0 +1,149 @@
+.main {
+  width: min(100% - 40px, 1040px);
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.intro {
+  max-width: 710px;
+  margin-bottom: 44px;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.intro p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(17px, 2vw, 19px);
+  line-height: 1.65;
+}
+
+.listHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.listHeader h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 820;
+}
+
+.listHeader p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.posts li + li {
+  border-top: 1px solid var(--line);
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 32px;
+  padding: 28px 20px;
+  border-radius: var(--radius-sm);
+  transition: background 150ms ease;
+}
+
+.post:hover,
+.post:focus-visible {
+  background: var(--surface);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  padding-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.category {
+  margin-bottom: 7px;
+  color: var(--brand);
+  font-weight: 820;
+}
+
+.content h3 {
+  max-width: 740px;
+  margin: 0;
+  font-size: clamp(23px, 2.5vw, 29px);
+  letter-spacing: -0.025em;
+  line-height: 1.24;
+  text-wrap: pretty;
+}
+
+.content p {
+  max-width: 720px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.readLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 15px;
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 820;
+}
+
+.post:hover h3,
+.post:focus-visible h3 {
+  color: var(--brand);
+}
+
+@media (max-width: 760px) {
+  .main {
+    width: min(100% - 32px, 1040px);
+    padding: 34px 0 48px;
+  }
+
+  .intro {
+    margin-bottom: 30px;
+  }
+
+  .post {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px 4px;
+  }
+
+  .details {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px 14px;
+    padding-top: 0;
+    font-size: 12px;
+  }
+
+  .category {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+}

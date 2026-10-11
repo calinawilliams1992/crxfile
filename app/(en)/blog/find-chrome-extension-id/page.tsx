@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import { PackageCheck } from "lucide-react";
 import { SiteFooter } from "@/app/components/SiteFooter";
+import { blogPostDate, blogPostUrl, chromeDownloadPost, chromeExtensionIdPost } from "@/lib/blog";
 
-const url = "https://www.crxfile.xyz/blog/find-chrome-extension-id";
-const publishedAt = "2026-10-07T00:00:00.000Z";
-const modifiedAt = "2026-10-11T00:00:00.000Z";
-const title = "How to Find a Chrome Extension ID";
-const description =
-  "Find a Chrome extension ID in its Web Store URL or in chrome://extensions. See a real 32-character example, check common mistakes, and learn what an ID identifies.";
+const url = blogPostUrl(chromeExtensionIdPost);
+const { publishedAt, modifiedAt, title, description } = chromeExtensionIdPost;
 
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/blog/find-chrome-extension-id" },
+  alternates: { canonical: chromeExtensionIdPost.path },
   openGraph: {
     type: "article",
     url,
@@ -83,7 +80,7 @@ export default function FindChromeExtensionIdPage() {
               Need the identifier for a store listing, an installed add-on, or an extension inventory?
               Here are the two quickest places to look and a way to check that you copied the right thing.
             </p>
-            <p className="article-meta">Published <time dateTime="2026-10-07">October 7, 2026</time> · 5 min read</p>
+            <p className="article-meta">Published <time dateTime={publishedAt}>{blogPostDate(publishedAt)}</time> · {chromeExtensionIdPost.readingMinutes} min read</p>
           </header>
 
           <aside className="article-summary" aria-label="Quick answer">
@@ -193,7 +190,7 @@ export default function FindChromeExtensionIdPage() {
               quick route back to the publisher and listing details. To retrieve a currently public Chrome
               package for an authorized backup or review, enter that URL or ID in the
               <a href="/#tool"> CRXFile tool</a>. Choose CRX for the package or ZIP for its extractable
-              files. Our <a href="/blog">Chrome Web Store CRX download guide</a> covers that workflow.
+              files. Our <a href={chromeDownloadPost.path}>Chrome Web Store CRX download guide</a> covers that workflow.
               For ordinary installation, return to the official store listing.
             </p>
             <p>

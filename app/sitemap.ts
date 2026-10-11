@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts, blogPostUrl } from "@/lib/blog";
 
 const SITE_URL = "https://www.crxfile.xyz";
 
@@ -33,21 +34,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: SITE_URL + "/blog",
       lastModified: new Date("2026-10-11T00:00:00.000Z"),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.8
     },
-    {
-      url: SITE_URL + "/blog/find-chrome-extension-id",
-      lastModified: new Date("2026-10-11T00:00:00.000Z"),
-      changeFrequency: "monthly",
+    ...blogPosts.map((post) => ({
+      url: blogPostUrl(post),
+      lastModified: new Date(post.modifiedAt),
+      changeFrequency: "monthly" as const,
       priority: 0.7
-    },
-    {
-      url: SITE_URL + "/blog/download-edge-extension-crx",
-      lastModified: new Date("2026-10-11T00:00:00.000Z"),
-      changeFrequency: "monthly",
-      priority: 0.7
-    },
+    })),
     {
       url: SITE_URL + "/privacy-policy",
       lastModified: new Date("2026-09-14T00:00:00.000Z"),

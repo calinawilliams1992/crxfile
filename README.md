@@ -13,7 +13,8 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Support Chrome Web Store and Microsoft Edge Add-ons URLs.
 - Parse extension links or 32-character extension IDs.
 - Provide English and Chinese pages for SEO and international users.
-- Publish a keyword-focused CRX download guide with internal links to the downloader.
+- Provide a dedicated blog index with dated summaries and links to every published guide.
+- Publish a keyword-focused CRX download guide at its own article URL with links to the downloader.
 - Include guides to finding Chrome extension IDs and downloading CRX packages from Microsoft Edge Add-ons.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
@@ -57,7 +58,7 @@ npm run build
 ```text
 app/
   (en)/                 English homepage and metadata
-    blog/               English download guide and individual extension tutorials
+    blog/               Blog index and individual English extension tutorials
     privacy-policy/     Privacy Policy
     terms-of-service/   Terms of Service
   zh/                   Chinese homepage and metadata
@@ -65,7 +66,13 @@ app/
   components/           Shared UI components
   robots.ts             robots.txt route
   sitemap.ts            Canonical sitemap.xml metadata route
+lib/
+  blog.ts               Shared article catalog for the blog index, metadata, and sitemap
 ```
+
+## Publishing a Blog Guide
+
+Add an article page under `app/(en)/blog/<slug>/page.tsx` and register its title, summary, dates, and reading time in `lib/blog.ts`. Use that catalog entry for the article's metadata. The blog index and sitemap both read the catalog, so each registered article has a visible entry and a crawlable URL. Reserve `/blog` for the article index; use each article's own URL for links to its content.
 
 ## Usage Notes
 

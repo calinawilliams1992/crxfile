@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import { PackageCheck } from "lucide-react";
 import { SiteFooter } from "@/app/components/SiteFooter";
+import { blogPostDate, blogPostUrl, chromeDownloadPost, edgeDownloadPost } from "@/lib/blog";
 
-const url = "https://www.crxfile.xyz/blog/download-edge-extension-crx";
-const publishedAt = "2026-10-11T00:00:00.000Z";
-const title = "How to Get a CRX from Microsoft Edge Add-ons";
-const description =
-  "Download an Edge extension CRX or ZIP from Microsoft Edge Add-ons. Follow a tested store URL example, check the package version, and fix common download errors.";
+const url = blogPostUrl(edgeDownloadPost);
+const { publishedAt, modifiedAt, title, description } = edgeDownloadPost;
 
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: "/blog/download-edge-extension-crx" },
+  alternates: { canonical: edgeDownloadPost.path },
   openGraph: {
     type: "article",
     url,
@@ -19,7 +17,7 @@ export const metadata: Metadata = {
     description,
     siteName: "CRXFile",
     publishedTime: publishedAt,
-    modifiedTime: publishedAt,
+    modifiedTime: modifiedAt,
     authors: ["CRXFile"]
   },
   twitter: { card: "summary", title, description }
@@ -31,7 +29,7 @@ const articleSchema = {
   headline: title,
   description,
   datePublished: publishedAt,
-  dateModified: publishedAt,
+  dateModified: modifiedAt,
   mainEntityOfPage: url,
   inLanguage: "en",
   author: { "@type": "Organization", name: "CRXFile" },
@@ -83,7 +81,7 @@ export default function DownloadEdgeExtensionCrxPage() {
               paste it into CRXFile, and choose Download CRX after parsing. You don&apos;t need
               to install the extension first.
             </p>
-            <p className="article-meta">Published <time dateTime="2026-10-11">October 11, 2026</time> · 5 min read</p>
+            <p className="article-meta">Published <time dateTime={publishedAt}>{blogPostDate(publishedAt)}</time> · {edgeDownloadPost.readingMinutes} min read</p>
           </header>
 
           <aside className="article-summary" aria-label="Quick answer">
@@ -204,7 +202,7 @@ export default function DownloadEdgeExtensionCrxPage() {
             </p>
             <p>
               If your extension comes from Google&apos;s store, follow the
-              <a href="/blog"> Chrome Web Store CRX download guide</a>{" "}and use that listing&apos;s
+              <a href={chromeDownloadPost.path}> Chrome Web Store CRX download guide</a>{" "}and use that listing&apos;s
               URL, even when you normally browse in Edge.
             </p>
           </section>
