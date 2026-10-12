@@ -16,6 +16,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Provide a dedicated blog index with dated summaries and links to every published guide.
 - Publish a keyword-focused CRX download guide at its own article URL with links to the downloader.
 - Include guides to finding Chrome extension IDs and downloading CRX packages from Microsoft Edge Add-ons.
+- Include a Chrome extension package backup workflow with a tested CRX example and a downloadable CSV record template.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.

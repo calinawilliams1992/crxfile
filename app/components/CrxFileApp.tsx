@@ -781,6 +781,7 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
               <p className="guide-related-link">
                 Need the ID first? <a href="/blog/find-chrome-extension-id">Find a Chrome extension ID</a> in the store URL or Chrome&apos;s extension details.
                 {" "}Using Microsoft&apos;s store? See <a href="/blog/download-edge-extension-crx">how to download an Edge extension CRX</a>.
+                {" "}Saving a package? Follow the <a href="/blog/backup-chrome-extension-package">Chrome extension backup workflow</a> to record its version and checksum.
               </p>
             ) : null}
 

@@ -264,6 +264,10 @@ export default function DownloadChromeExtensionCrxPage() {
               For a Microsoft store listing, follow <a href="/blog/download-edge-extension-crx">How to Get a CRX from Microsoft Edge Add-ons</a>.
               It includes a tested Edge download, CRX and ZIP results, and checks for common failures.
             </p>
+            <p>
+              Keeping the downloaded file? Our <a href="/blog/backup-chrome-extension-package">Chrome extension package backup workflow</a> includes
+              a record template, version checks, and SHA-256 commands for verifying a saved copy.
+            </p>
           </section>
 
           <section>

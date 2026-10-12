@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE_URL + "/",
-      lastModified: new Date("2026-09-14T00:00:00.000Z"),
+      lastModified: new Date("2026-10-12T00:00:00.000Z"),
       changeFrequency: "weekly",
       priority: 1,
       alternates: {
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: SITE_URL + "/blog",
-      lastModified: new Date("2026-10-11T00:00:00.000Z"),
+      lastModified: new Date(blogPosts[0].modifiedAt),
       changeFrequency: "weekly",
       priority: 0.8
     },

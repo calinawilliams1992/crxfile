@@ -1317,6 +1317,35 @@ summary:focus-visible {
   border-bottom: 0;
 }
 
+.backup-record table {
+  table-layout: fixed;
+}
+
+.backup-record th:first-child {
+  width: 160px;
+}
+
+.backup-record td {
+  overflow-wrap: anywhere;
+}
+
+.article-code {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 14px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-subtle);
+}
+
+.article-code code {
+  padding: 0;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .article-steps,
 .legal-content ul {
   display: grid;

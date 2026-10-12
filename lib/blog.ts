@@ -17,7 +17,7 @@ export const chromeDownloadPost = {
     "Learn how to download a CRX file or ZIP source package from a public Chrome Web Store or Edge Add-ons listing with CRXFile.",
   category: "Chrome Web Store",
   publishedAt: "2026-07-25T00:00:00.000Z",
-  modifiedAt: "2026-10-11T00:00:00.000Z",
+  modifiedAt: "2026-10-12T00:00:00.000Z",
   readingMinutes: 7
 } satisfies BlogPost;
 
@@ -43,10 +43,22 @@ export const edgeDownloadPost = {
   readingMinutes: 5
 } satisfies BlogPost;
 
+export const chromeExtensionBackupPost = {
+  path: "/blog/backup-chrome-extension-package",
+  title: "A Practical Chrome Extension Package Backup Workflow",
+  description:
+    "Back up a Chrome extension package with a CRX file, verified version, store URL, and SHA-256 checksum. Includes a tested example and a free backup record template.",
+  category: "Package backups",
+  publishedAt: "2026-10-12T00:00:00.000Z",
+  modifiedAt: "2026-10-12T00:00:00.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
 export const blogPosts: readonly BlogPost[] = [
   chromeDownloadPost,
   chromeExtensionIdPost,
-  edgeDownloadPost
+  edgeDownloadPost,
+  chromeExtensionBackupPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {
