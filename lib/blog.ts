@@ -17,7 +17,7 @@ export const chromeDownloadPost = {
     "Learn how to download a CRX file or ZIP source package from a public Chrome Web Store or Edge Add-ons listing with CRXFile.",
   category: "Chrome Web Store",
   publishedAt: "2026-07-25T00:00:00.000Z",
-  modifiedAt: "2026-10-12T00:00:00.000Z",
+  modifiedAt: "2026-10-13T00:00:00.000Z",
   readingMinutes: 7
 } satisfies BlogPost;
 
@@ -54,11 +54,23 @@ export const chromeExtensionBackupPost = {
   readingMinutes: 5
 } satisfies BlogPost;
 
+export const extensionSourceReviewPost = {
+  path: "/blog/view-chrome-extension-source-without-installing",
+  title: "How to Inspect Extension Source Without Installing It",
+  description:
+    "View Chrome extension source without installing it. Download a ZIP, read manifest.json, trace scripts and network calls, and try a small source review example.",
+  category: "Source inspection",
+  publishedAt: "2026-10-13T00:00:00.000Z",
+  modifiedAt: "2026-10-13T00:00:00.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
 export const blogPosts: readonly BlogPost[] = [
   chromeDownloadPost,
   chromeExtensionIdPost,
   edgeDownloadPost,
-  chromeExtensionBackupPost
+  chromeExtensionBackupPost,
+  extensionSourceReviewPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {

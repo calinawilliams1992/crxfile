@@ -17,6 +17,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Publish a keyword-focused CRX download guide at its own article URL with links to the downloader.
 - Include guides to finding Chrome extension IDs and downloading CRX packages from Microsoft Edge Add-ons.
 - Include a Chrome extension package backup workflow with a tested CRX example and a downloadable CSV record template.
+- Explain how to inspect extension source without installing it, with an original Manifest V3 example ZIP.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
@@ -74,6 +75,8 @@ lib/
 ## Publishing a Blog Guide
 
 Add an article page under `app/(en)/blog/<slug>/page.tsx` and register its title, summary, dates, and reading time in `lib/blog.ts`. Use that catalog entry for the article's metadata. The blog index and sitemap both read the catalog, so each registered article has a visible entry and a crawlable URL. Reserve `/blog` for the article index; use each article's own URL for links to its content.
+
+The source inspection article uses `examples/source-review-demo/manifest.json` directly. After editing the example, rebuild its download from the repository root with `python3 -m zipfile -c public/examples/source-review-demo.zip examples/source-review-demo`. Keep the archive and source files in the same commit.
 
 ## Usage Notes
 

@@ -221,12 +221,10 @@ export default function DownloadChromeExtensionCrxPage() {
           <section>
             <h2>How to review Chrome extension source code safely</h2>
             <p>
-              A ZIP source package is especially useful when you need to understand what an
-              extension can do before using it. Inspect the manifest&apos;s requested permissions,
-              then look at content scripts, background service workers, external network requests,
-              and bundled third-party libraries. These checks help security reviewers and
-              developers assess an extension without treating a package download as a replacement
-              for the store&apos;s trust and update controls.
+              Download the ZIP, extract it, and read its files in a text editor. Our guide to
+              <a href="/blog/view-chrome-extension-source-without-installing"> inspecting extension source without installing it</a>{" "}shows
+              how to follow manifest entries into scripts, with a downloadable example. Reading
+              the source helps you assess behavior, but it doesn&apos;t prove an extension is safe.
             </p>
             <p>
               If you are testing an extension you are authorized to use, load an unpacked source
