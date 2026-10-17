@@ -128,6 +128,11 @@ export default function InspectExtensionSourcePage() {
               Record <code>version</code>, then find the files Chrome loads.
             </p>
             <p>
+              If the fields are unfamiliar, our <a href="/blog/read-chrome-extension-manifest">guide to reading a Chrome extension manifest</a>{" "}explains
+              the version fields, permissions, service worker, and content script matches
+              using the same sample below.
+            </p>
+            <p>
               We made a small <a href="/examples/source-review-demo.zip" download>Source Review Demo ZIP</a>{" "}for
               this exercise. It&apos;s an original teaching sample, not a store download. Extract
               it and read along without installing anything. We checked its file paths and

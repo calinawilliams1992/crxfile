@@ -61,7 +61,18 @@ export const extensionSourceReviewPost = {
     "View Chrome extension source without installing it. Download a ZIP, read manifest.json, trace scripts and network calls, and try a small source review example.",
   category: "Source inspection",
   publishedAt: "2026-10-13T00:00:00.000Z",
-  modifiedAt: "2026-10-13T00:00:00.000Z",
+  modifiedAt: "2026-10-18T00:00:00.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
+export const chromeExtensionManifestPost = {
+  path: "/blog/read-chrome-extension-manifest",
+  title: "How to Read a Chrome Extension Manifest",
+  description:
+    "Read a Chrome extension manifest.json with an annotated Manifest V3 example. Understand version fields, permissions, service workers, and content script matches.",
+  category: "Manifest JSON",
+  publishedAt: "2026-10-18T00:00:00.000Z",
+  modifiedAt: "2026-10-18T00:00:00.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -70,7 +81,8 @@ export const blogPosts: readonly BlogPost[] = [
   chromeExtensionIdPost,
   edgeDownloadPost,
   chromeExtensionBackupPost,
-  extensionSourceReviewPost
+  extensionSourceReviewPost,
+  chromeExtensionManifestPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {

@@ -18,6 +18,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Include guides to finding Chrome extension IDs and downloading CRX packages from Microsoft Edge Add-ons.
 - Include a Chrome extension package backup workflow with a tested CRX example and a downloadable CSV record template.
 - Explain how to inspect extension source without installing it, with an original Manifest V3 example ZIP.
+- Explain how to read a Chrome extension manifest, with an annotated JSON example and checks for version fields, permissions, service workers, and content scripts.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
