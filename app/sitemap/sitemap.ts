@@ -3,6 +3,7 @@ import { blogPosts, blogPostUrl } from "@/lib/blog";
 
 const SITE_URL = "https://www.crxfile.xyz";
 
+// Preserve /sitemap/sitemap.xml, the site's established Search Console URL.
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {

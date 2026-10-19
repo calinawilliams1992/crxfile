@@ -68,7 +68,7 @@ app/
   api/                  Download and parse API routes
   components/           Shared UI components
   robots.ts             robots.txt route
-  sitemap.ts            Canonical sitemap.xml metadata route
+  sitemap/sitemap.ts    Existing /sitemap/sitemap.xml metadata route
 lib/
   blog.ts               Shared article catalog for the blog index, metadata, and sitemap
 ```
@@ -76,6 +76,8 @@ lib/
 ## Publishing a Blog Guide
 
 Add an article page under `app/(en)/blog/<slug>/page.tsx` and register its title, summary, dates, and reading time in `lib/blog.ts`. Use that catalog entry for the article's metadata. The blog index and sitemap both read the catalog, so each registered article has a visible entry and a crawlable URL. Reserve `/blog` for the article index; use each article's own URL for links to its content.
+
+Keep the established sitemap location at `/sitemap/sitemap.xml`. Its existing Search Console submission and robots.txt declaration use `http://www.crxfile.xyz/sitemap/sitemap.xml`; Vercel upgrades HTTP to HTTPS while preserving that path. The root `/sitemap.xml` URL only redirects to the established location. Do not move the sitemap when publishing an article.
 
 The source inspection article uses `examples/source-review-demo/manifest.json` directly. After editing the example, rebuild its download from the repository root with `python3 -m zipfile -c public/examples/source-review-demo.zip examples/source-review-demo`. Keep the archive and source files in the same commit.
 
@@ -149,7 +151,7 @@ app/
   api/                  下载与解析相关的 API 路由
   components/           共享 UI 组件
   robots.ts             robots.txt 路由
-  sitemap.ts            sitemap.xml 路由
+  sitemap/sitemap.ts    既有 /sitemap/sitemap.xml 路由
 ```
 
 ### 使用说明
