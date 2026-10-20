@@ -174,6 +174,11 @@ export default function ReadChromeExtensionManifestPage() {
           <section id="permissions">
             <h2>Read permissions alongside site access</h2>
             <p>
+              Use our <a href="/blog/chrome-extension-permissions-explained">Chrome extension permissions guide</a>{" "}for
+              a field-by-field review table covering API access, host patterns, optional
+              grants, and the questions to ask about each declaration.
+            </p>
+            <p>
               Start with <code>permissions</code>. In the demo, <code>storage</code>{" "}matches the
               code that saves a page title. For another package, find each requested API in
               the scripts and ask which feature needs it.

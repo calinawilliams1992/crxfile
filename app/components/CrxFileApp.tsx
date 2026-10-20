@@ -784,6 +784,7 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
                 {" "}Saving a package? Follow the <a href="/blog/backup-chrome-extension-package">Chrome extension backup workflow</a> to record its version and checksum.
                 {" "}Reviewing the code? Learn <a href="/blog/view-chrome-extension-source-without-installing">how to inspect extension source without installing it</a>.
                 {" "}Start with <a href="/blog/read-chrome-extension-manifest">how to read a Chrome extension manifest</a> to understand its entry files and permissions.
+                {" "}For a closer access review, see <a href="/blog/chrome-extension-permissions-explained">Chrome extension permissions explained</a>.
               </p>
             ) : null}
 

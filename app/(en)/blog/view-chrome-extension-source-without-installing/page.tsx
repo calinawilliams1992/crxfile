@@ -184,6 +184,11 @@ export default function InspectExtensionSourcePage() {
           <section>
             <h2>Check permissions against actual data use</h2>
             <p>
+              Our <a href="/blog/chrome-extension-permissions-explained">Chrome extension permissions review table</a>{" "}helps
+              you separate API permissions, website access, and optional grants before
+              tracing how the scripts use them.
+            </p>
+            <p>
               Read <code>permissions</code>, <code>host_permissions</code>, and any optional
               permission fields. Compare them with the feature you traced. Our demo asks for
               storage and uses it to save one title. Its content script targets one example
