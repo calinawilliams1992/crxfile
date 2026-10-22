@@ -83,7 +83,18 @@ export const chromeExtensionPermissionsPost = {
     "Chrome extension permissions explained with a review table and Manifest V3 example. Understand API permissions, host access, optional grants, and activeTab.",
   category: "Extension permissions",
   publishedAt: "2026-10-20T00:00:00.000Z",
-  modifiedAt: "2026-10-20T00:00:00.000Z",
+  modifiedAt: "2026-10-22T00:00:00.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
+export const hostPermissionsVsActiveTabPost = {
+  path: "/blog/host-permissions-vs-activetab",
+  title: "Host Permissions vs activeTab in Chrome Extensions",
+  description:
+    "Compare host_permissions and activeTab in Chrome extensions with two Manifest V3 examples. Learn access scope, grant lifetime, scripting, and common mistakes.",
+  category: "Extension site access",
+  publishedAt: "2026-10-22T00:00:00.000Z",
+  modifiedAt: "2026-10-22T00:00:00.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -94,7 +105,8 @@ export const blogPosts: readonly BlogPost[] = [
   chromeExtensionBackupPost,
   extensionSourceReviewPost,
   chromeExtensionManifestPost,
-  chromeExtensionPermissionsPost
+  chromeExtensionPermissionsPost,
+  hostPermissionsVsActiveTabPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {

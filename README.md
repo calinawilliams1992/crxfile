@@ -20,6 +20,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Explain how to inspect extension source without installing it, with an original Manifest V3 example ZIP.
 - Explain how to read a Chrome extension manifest, with an annotated JSON example and checks for version fields, permissions, service workers, and content scripts.
 - Review Chrome extension permissions with a field-by-field table for API access, host patterns, optional grants, and activeTab.
+- Compare host permissions and activeTab with two minimal Manifest V3 examples, a shared action handler, and checks for site access and grant lifetime.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.

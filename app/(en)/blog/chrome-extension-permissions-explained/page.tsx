@@ -240,6 +240,11 @@ export default function ChromeExtensionPermissionsPage() {
               need a different access model. Broad access deserves an explanation; it
               isn&apos;t evidence of malicious intent by itself.
             </p>
+            <p>
+              Compare <a href="/blog/host-permissions-vs-activetab">host permissions vs activeTab</a>{" "}with
+              two complete Manifest V3 examples to see how the same feature can request
+              different access.
+            </p>
           </section>
 
           <section>
