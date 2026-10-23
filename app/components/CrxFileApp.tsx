@@ -786,6 +786,7 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
                 {" "}Start with <a href="/blog/read-chrome-extension-manifest">how to read a Chrome extension manifest</a> to understand its entry files and permissions.
                 {" "}For a closer access review, see <a href="/blog/chrome-extension-permissions-explained">Chrome extension permissions explained</a>.
                 {" "}Compare <a href="/blog/host-permissions-vs-activetab">host permissions vs activeTab</a> for ongoing and click-triggered site access.
+                {" "}Then <a href="/blog/inspect-extension-content-scripts">trace an extension&apos;s content scripts</a> from matching URLs to page changes.
               </p>
             ) : null}
 

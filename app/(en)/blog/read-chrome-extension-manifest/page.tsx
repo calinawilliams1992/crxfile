@@ -242,6 +242,10 @@ export default function ReadChromeExtensionManifestPage() {
               this list as complete. The <a href="https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts" rel="noopener noreferrer">content script reference</a>{" "}covers
               these settings.
             </p>
+            <p>
+              To follow the code beyond these declarations, see <a href="/blog/inspect-extension-content-scripts">how to trace an extension&apos;s content scripts</a>,
+              with a DOM example and a URL matching table.
+            </p>
           </section>
 
           <section>

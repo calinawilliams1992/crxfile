@@ -72,7 +72,7 @@ export const chromeExtensionManifestPost = {
     "Read a Chrome extension manifest.json with an annotated Manifest V3 example. Understand version fields, permissions, service workers, and content script matches.",
   category: "Manifest JSON",
   publishedAt: "2026-10-18T00:00:00.000Z",
-  modifiedAt: "2026-10-20T00:00:00.000Z",
+  modifiedAt: "2026-10-23T00:00:00.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -98,6 +98,17 @@ export const hostPermissionsVsActiveTabPost = {
   readingMinutes: 5
 } satisfies BlogPost;
 
+export const contentScriptInspectionPost = {
+  path: "/blog/inspect-extension-content-scripts",
+  title: "How to Trace an Extension’s Content Scripts",
+  description:
+    "Inspect Chrome extension content scripts: trace manifest matches to JavaScript files, follow DOM changes and messages, and try an original page-marking example.",
+  category: "Content script inspection",
+  publishedAt: "2026-10-23T00:00:00.000Z",
+  modifiedAt: "2026-10-23T00:00:00.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
 export const blogPosts: readonly BlogPost[] = [
   chromeDownloadPost,
   chromeExtensionIdPost,
@@ -106,7 +117,8 @@ export const blogPosts: readonly BlogPost[] = [
   extensionSourceReviewPost,
   chromeExtensionManifestPost,
   chromeExtensionPermissionsPost,
-  hostPermissionsVsActiveTabPost
+  hostPermissionsVsActiveTabPost,
+  contentScriptInspectionPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {

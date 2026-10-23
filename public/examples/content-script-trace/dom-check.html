@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>Content Script DOM Check | CRXFile</title>
+  <style>
+    :root { color-scheme: light; font: 17px/1.65 system-ui,sans-serif; color: #183b56; background: #f5f7fa; }
+    body { max-width: 760px; margin: 48px auto; padding: 0 22px 40px; }
+    h1 { font-size: clamp(1.6rem,5vw,2.1rem); line-height: 1.2; }
+    h2 { font-size: 1.2rem; }
+    a { color: #17677a; } code { overflow-wrap: anywhere; }
+    article,aside { background: white; border: 1px solid #ccd8e0; padding: 8px 22px; border-radius: 12px; margin: 22px 0; }
+    [data-crxfile-note] { color: #08755a; font-size: .85em; }
+    button { font: inherit; background: #183b56; color: white; border: 0; padding: 10px 16px; border-radius: 7px; cursor: pointer; margin: 0 8px 12px 0; }
+    button:focus-visible,a:focus-visible { outline: 3px solid #dc9b11; outline-offset: 3px; }
+    #status { padding: 12px 16px; background: #e5f3ef; border-radius: 7px; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/blog/inspect-extension-content-scripts">Back to the content script tracing guide</a>
+    <h1>Content Script DOM Check</h1>
+    <p>This page runs the guide's <a href="content.js">content.js</a> as an ordinary page script. It shows which headings the code changes. Chrome extension injection, isolated worlds, and URL permissions require separate extension testing.</p>
+  </header>
+  <main>
+    <p id="status" role="status" aria-live="polite"></p>
+    <button id="add" type="button">Add article heading</button>
+    <button id="rerun" type="button">Run content.js again</button>
+    <article id="sample-article" aria-label="Sample article">
+      <h2>First article heading</h2>
+      <p>The script appends a reviewed marker to this heading.</p>
+      <h2>Second article heading</h2>
+      <p>Add a heading, then run the script again to check one-time selection and duplicate prevention.</p>
+    </article>
+    <aside aria-label="Outside the article">
+      <h2>Outside article heading</h2>
+      <p>The selector <code>article h2</code> does not include this heading.</p>
+    </aside>
+  </main>
+  <script src="content.js"></script>
+  <script>
+    const summary = document.querySelector("#status");
+    function updateSummary() {
+      const headings = document.querySelectorAll("article h2").length;
+      const notes = document.querySelectorAll("article h2 [data-crxfile-note]").length;
+      summary.textContent = `${headings} article headings; ${notes} reviewed markers.`;
+    }
+    document.querySelector("#add").addEventListener("click", () => {
+      const heading = document.createElement("h2");
+      heading.textContent = "Added article heading";
+      document.querySelector("#sample-article").append(heading);
+      updateSummary();
+    });
+    document.querySelector("#rerun").addEventListener("click", () => {
+      const script = document.createElement("script");
+      script.src = "content.js";
+      script.onload = () => { updateSummary(); script.remove(); };
+      document.body.append(script);
+    });
+    updateSummary();
+  </script>
+</body>
+</html>

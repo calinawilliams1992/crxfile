@@ -21,6 +21,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Explain how to read a Chrome extension manifest, with an annotated JSON example and checks for version fields, permissions, service workers, and content scripts.
 - Review Chrome extension permissions with a field-by-field table for API access, host patterns, optional grants, and activeTab.
 - Compare host permissions and activeTab with two minimal Manifest V3 examples, a shared action handler, and checks for site access and grant lifetime.
+- Trace content scripts from URL patterns to DOM changes, with an original manifest, shared source file, and interactive DOM check page.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
@@ -82,6 +83,8 @@ Add an article page under `app/(en)/blog/<slug>/page.tsx` and register its title
 Keep the established sitemap location at `/sitemap/sitemap.xml`. Its existing Search Console submission and robots.txt declaration use `http://www.crxfile.xyz/sitemap/sitemap.xml`; Vercel upgrades HTTP to HTTPS while preserving that path. The root `/sitemap.xml` URL only redirects to the established location. Do not move the sitemap when publishing an article.
 
 The source inspection article uses `examples/source-review-demo/manifest.json` directly. After editing the example, rebuild its download from the repository root with `python3 -m zipfile -c public/examples/source-review-demo.zip examples/source-review-demo`. Keep the archive and source files in the same commit.
+
+The content script tracing article reads its manifest and JavaScript from `public/examples/content-script-trace/`. The DOM check page in that folder runs the same `content.js` as a regular page script. Keep those files together; the check demonstrates DOM behavior and does not test Chrome extension injection or site permissions.
 
 ## Usage Notes
 

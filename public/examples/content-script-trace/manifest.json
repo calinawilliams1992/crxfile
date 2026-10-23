@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Content Script Trace Demo",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/articles/*"],
+      "exclude_matches": ["https://example.com/articles/private/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "world": "ISOLATED"
+    }
+  ]
+}
