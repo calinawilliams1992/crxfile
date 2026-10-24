@@ -243,6 +243,8 @@ export default function ContentScriptInspectionPage() {
               A clean-looking content script can still hand data to a worker that
               stores it or sends it to a server. Chrome&apos;s <a href="https://developer.chrome.com/docs/extensions/develop/concepts/messaging" rel="noopener noreferrer">message passing guide</a>{" "}describes
               the connection between those components.
+              Our <a href="/blog/chrome-extension-service-worker">MV3 service worker walkthrough</a>{" "}follows
+              a message from its sender through the receiving handler to local storage.
             </p>
             <p>
               Keep a review note with the matching URL, script filename, DOM read or

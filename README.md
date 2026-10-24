@@ -22,6 +22,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Review Chrome extension permissions with a field-by-field table for API access, host patterns, optional grants, and activeTab.
 - Compare host permissions and activeTab with two minimal Manifest V3 examples, a shared action handler, and checks for site access and grant lifetime.
 - Trace content scripts from URL patterns to DOM changes, with an original manifest, shared source file, and interactive DOM check page.
+- Trace an MV3 service worker through message validation, local storage, and a popup reader using the original source review example.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
@@ -79,6 +80,8 @@ lib/
 ## Publishing a Blog Guide
 
 Add an article page under `app/(en)/blog/<slug>/page.tsx` and register its title, summary, dates, and reading time in `lib/blog.ts`. Use that catalog entry for the article's metadata. The blog index and sitemap both read the catalog, so each registered article has a visible entry and a crawlable URL. Reserve `/blog` for the article index; use each article's own URL for links to its content.
+
+Store publication and modification dates as real ISO timestamps. Display article dates in Asia/Shanghai; retain the full timestamps in metadata and the sitemap.
 
 Keep the established sitemap location at `/sitemap/sitemap.xml`. Its existing Search Console submission and robots.txt declaration use `http://www.crxfile.xyz/sitemap/sitemap.xml`; Vercel upgrades HTTP to HTTPS while preserving that path. The root `/sitemap.xml` URL only redirects to the established location. Do not move the sitemap when publishing an article.
 

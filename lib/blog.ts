@@ -105,7 +105,18 @@ export const contentScriptInspectionPost = {
     "Inspect Chrome extension content scripts: trace manifest matches to JavaScript files, follow DOM changes and messages, and try an original page-marking example.",
   category: "Content script inspection",
   publishedAt: "2026-10-23T00:00:00.000Z",
-  modifiedAt: "2026-10-23T00:00:00.000Z",
+  modifiedAt: "2026-10-24T16:44:55.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
+export const serviceWorkerPost = {
+  path: "/blog/chrome-extension-service-worker",
+  title: "Finding What an MV3 Service Worker Does",
+  description:
+    "Chrome extension service worker explained: trace an MV3 background file through events, messages, storage, and network calls with an annotated source example.",
+  category: "MV3 service workers",
+  publishedAt: "2026-10-24T16:44:55.000Z",
+  modifiedAt: "2026-10-24T16:44:55.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -118,7 +129,8 @@ export const blogPosts: readonly BlogPost[] = [
   chromeExtensionManifestPost,
   chromeExtensionPermissionsPost,
   hostPermissionsVsActiveTabPost,
-  contentScriptInspectionPost
+  contentScriptInspectionPost,
+  serviceWorkerPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {
@@ -130,6 +142,6 @@ export function blogPostDate(publishedAt: string) {
     year: "numeric",
     month: "long",
     day: "numeric",
-    timeZone: "UTC"
+    timeZone: "Asia/Shanghai"
   }).format(new Date(publishedAt));
 }
