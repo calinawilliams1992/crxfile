@@ -83,7 +83,7 @@ export const chromeExtensionPermissionsPost = {
     "Chrome extension permissions explained with a review table and Manifest V3 example. Understand API permissions, host access, optional grants, and activeTab.",
   category: "Extension permissions",
   publishedAt: "2026-10-20T00:00:00.000Z",
-  modifiedAt: "2026-10-22T00:00:00.000Z",
+  modifiedAt: "2026-10-25T03:31:38.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -116,7 +116,18 @@ export const serviceWorkerPost = {
     "Chrome extension service worker explained: trace an MV3 background file through events, messages, storage, and network calls with an annotated source example.",
   category: "MV3 service workers",
   publishedAt: "2026-10-24T16:44:55.000Z",
-  modifiedAt: "2026-10-24T16:44:55.000Z",
+  modifiedAt: "2026-10-25T03:31:38.000Z",
+  readingMinutes: 5
+} satisfies BlogPost;
+
+export const networkRequestsPost = {
+  path: "/blog/audit-extension-network-requests",
+  title: "How to Review Network Calls in Extension Source",
+  description:
+    "Audit Chrome extension network requests by tracing fetch, XHR, endpoint URLs, and payloads. Includes an original code example and a browser mock check.",
+  category: "Network request review",
+  publishedAt: "2026-10-25T03:31:38.000Z",
+  modifiedAt: "2026-10-25T03:31:38.000Z",
   readingMinutes: 5
 } satisfies BlogPost;
 
@@ -130,7 +141,8 @@ export const blogPosts: readonly BlogPost[] = [
   chromeExtensionPermissionsPost,
   hostPermissionsVsActiveTabPost,
   contentScriptInspectionPost,
-  serviceWorkerPost
+  serviceWorkerPost,
+  networkRequestsPost
 ].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 export function blogPostUrl(post: BlogPost) {

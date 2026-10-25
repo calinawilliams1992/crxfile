@@ -788,6 +788,7 @@ export function CrxFileApp({ initialLang = "en" }: { initialLang?: Lang }) {
                 {" "}Compare <a href="/blog/host-permissions-vs-activetab">host permissions vs activeTab</a> for ongoing and click-triggered site access.
                 {" "}Then <a href="/blog/inspect-extension-content-scripts">trace an extension&apos;s content scripts</a> from matching URLs to page changes.
                 {" "}Follow its messages into <a href="/blog/chrome-extension-service-worker">the extension service worker</a> to check background behavior.
+                {" "}Use the <a href="/blog/audit-extension-network-requests">extension network request review</a> to trace outbound data.
               </p>
             ) : null}
 

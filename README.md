@@ -23,6 +23,7 @@ Use CRXFile to get CRX files, download ZIP source packages, inspect extension so
 - Compare host permissions and activeTab with two minimal Manifest V3 examples, a shared action handler, and checks for site access and grant lifetime.
 - Trace content scripts from URL patterns to DOM changes, with an original manifest, shared source file, and interactive DOM check page.
 - Trace an MV3 service worker through message validation, local storage, and a popup reader using the original source review example.
+- Audit extension network calls with a source review table, an original request module, and a browser check that uses a mock fetch function.
 - Provide Privacy Policy and Terms of Service pages tailored to the downloader.
 - Generate SEO-friendly metadata, robots.txt, and sitemap.xml routes.
 - Run without user accounts, registration, or persistent file storage.
@@ -88,6 +89,8 @@ Keep the established sitemap location at `/sitemap/sitemap.xml`. Its existing Se
 The source inspection article uses `examples/source-review-demo/manifest.json` directly. After editing the example, rebuild its download from the repository root with `python3 -m zipfile -c public/examples/source-review-demo.zip examples/source-review-demo`. Keep the archive and source files in the same commit.
 
 The content script tracing article reads its manifest and JavaScript from `public/examples/content-script-trace/`. The DOM check page in that folder runs the same `content.js` as a regular page script. Keep those files together; the check demonstrates DOM behavior and does not test Chrome extension injection or site permissions.
+
+The network request article reads `public/examples/network-request-review/request.js` directly. Its browser check always supplies a mock fetch function and never sends the sample collector POST. Keep the check page noindex and out of the sitemap; it demonstrates request construction, not Chrome extension networking.
 
 ## Usage Notes
 

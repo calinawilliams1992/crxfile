@@ -262,7 +262,8 @@ export default function ChromeExtensionPermissionsPage() {
               a record template. If a host or permission still has no clear purpose,
               write down that exact question and follow the relevant code using our
               <a href="/blog/view-chrome-extension-source-without-installing"> source inspection guide</a>.
-              That gives the next reviewer something concrete to verify.
+              Then <a href="/blog/audit-extension-network-requests">audit the extension&apos;s network requests</a>{" "}to
+              connect its declared hosts to actual destinations and request payloads.
             </p>
           </section>
         </article>

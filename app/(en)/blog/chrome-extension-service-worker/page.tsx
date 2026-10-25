@@ -222,6 +222,8 @@ export default function ServiceWorkerPage() {
               modules. For each request, write down the destination and the payload.
               Does it contain the title just received? Does a stored setting change
               the host? A literal URL search can miss a destination assembled at runtime.
+              Our <a href="/blog/audit-extension-network-requests">network request review guide</a>{" "}includes
+              a worked example.
             </p>
             <p>
               Worker cross-origin requests need the appropriate host permissions.
